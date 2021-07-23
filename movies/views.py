@@ -1,5 +1,4 @@
-# class which facilitates sending back json
-from rest_framework.views import APIView
+from rest_framework.views import APIView  # class which facilitates sending back json
 from rest_framework.response import Response  # method to send back a response
 from rest_framework import status  # methods to send back a status code
 from rest_framework.exceptions import NotFound
@@ -31,6 +30,7 @@ class MovieListView(APIView):
         return Response(movie_to_add.errors, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
 
 class MovieDetailView(APIView):
+    permission_classes = (IsAuthenticatedOrReadOnly, )
 
     def get_movie(self, pk):
         try:

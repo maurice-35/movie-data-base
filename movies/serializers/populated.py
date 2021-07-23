@@ -1,9 +1,10 @@
-from comments.serializers.common import CommentSerializer
-from .common import MovieSerializer
-#from jwt_auth.serializer import UserSerializer
+from comments.serializers.populated import PopulatedCommentSerializer
+from ..serializers.common import MovieSerializer
+from jwt_auth.serializers import UserSerializer
 
 
 class PopulatedMovieSerializer(MovieSerializer):
 
-    comments = CommentSerializer(many=True)  # Adding an object called serializers
+    # Adding an object called serializers
+    comments = PopulatedCommentSerializer(many=True)
     #owner = UserSerializer()

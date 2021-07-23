@@ -12,6 +12,11 @@ class Movie(models.Model):
     year = models.PositiveIntegerField(default=None)
     views_count = models.PositiveIntegerField(default=None)
     worth_a_watch = models.BooleanField(default=True, null=True)
+    owner = models.ForeignKey(
+        "jwt_auth.User",
+        related_name="shows",
+        on_delete = models.CASCADE
+    )
 
     def __str__(self):
         return f"{self.title} - {self.year}"
