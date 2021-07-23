@@ -7,4 +7,4 @@ class PopulatedMovieSerializer(MovieSerializer):
 
     # Adding an object called serializers
     comments = PopulatedCommentSerializer(many=True)
-    #owner = UserSerializer()
+    owner = UserSerializer()
