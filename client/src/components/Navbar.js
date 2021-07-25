@@ -37,6 +37,16 @@ const Navbar = () => {
           <div className="navbar-item">
             <Link target="_blank" to="Login">Login</Link>
           </div>
+          <div className="navbar-item has-dropdown">
+            <a className="navbar-link">
+              <Link tartget="_balnk" to="Browse My movies">Browse My Movies</Link>
+            </a>
+            <div className="navbar-dropdown">
+              <a className="navbar-item">
+                Browse My Movies
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </nav>
