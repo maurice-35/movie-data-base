@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
 
-const Movies = () => {
+const MovieIndex = () => {
   const [movies, setMovies] = useState([])
 
   useEffect(() => {
@@ -50,4 +50,4 @@ const Movies = () => {
   )
 }
 
-export default Movies
+export default MovieIndex

@@ -23,7 +23,7 @@ const Navbar = () => {
             <Link target="_blank" to="/Homes">Homes</Link>
           </div>
           <div className="navbar-item">
-            
+
           </div>
           <div className="navbar-item">
             <Link target="_blank" to="/Movies">Movies</Link>
@@ -37,16 +37,21 @@ const Navbar = () => {
           <div className="navbar-item">
             <Link target="_blank" to="Login">Login</Link>
           </div>
-          <div className="navbar-item has-dropdown">
+          {/* <div className="navbar-item has-dropdown is-transparent">
             <a className="navbar-link">
-              <Link tartget="_balnk" to="Browse My movies">Browse My Movies</Link>
-            </a>
-            <div className="navbar-dropdown">
+              <Link tartget="_blank" to="Browse My movies">Browse My Movies</Link>
+            </a> */}
+          <select id="search movies" onChange="location =this.options[this.selectedIndex.value;">
+            <option>Browse My Movies</option>
+            <option value="https://www.youtube.com/watch?v=loPCgi1S3ac"></option>
+            <option value="https://youtu.be/aK-X2d0lJ_s"></option>
+          </select>
+          {/* <div className="navbar-dropdown">
               <a className="navbar-item">
                 Browse My Movies
               </a>
-            </div>
-          </div>
+            </div> */}
+          {/* </div> */}
         </div>
       </div>
     </nav>
