@@ -13,29 +13,6 @@ const Home = () => {
             <div id="header-wrapper" className="clearfix">
               <div id="search-container" className="clearfix">
 
-                {/* <div>
-                  <header>
-                    <span id="main-body-button">Movies</span>
-                    <a href="#">
-                      <img src="logo" alt="My logo" id="logo"></img>
-                    </a>
-                    <nav id="main-nav">
-                      <ul>
-                        <li>
-                          <a href="#" title="Click Here for New Generation Entertainment"></a>
-                        </li>
-                      </ul>
-                    </nav>
-                  </header>
-                </div>
-              </div>
-              <div className="p-2 w-100 center">
-                <span className="text-monospace text-center fs-1">Text <i className="fas fa-heart">Text</i></span>
-                <p className="text-monospace text-center">
-                  TEXT
-                </p>
-              </div>
-            </div> */}
               </div>
             </div>
             <Carousel>

@@ -4,6 +4,7 @@ import Home from './components/Home'
 import MovieIndex from './components/Movies/MovieIndex'
 
 import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 
 // const App = () => {
 
@@ -24,6 +25,7 @@ const App = () => {
           <Home />
         </Route>
       </Switch>
+      <Footer />
     </BrowserRouter>
   )
 }
