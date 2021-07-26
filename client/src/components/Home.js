@@ -15,6 +15,7 @@ const Home = () => {
 
               </div>
             </div>
+            <video src="https://res.cloudinary.com/doe5zwesw/video/upload/v1627301742/Project%204/v2_aeym6w.webm"/>
             <Carousel>
               <Carousel.Item>
                 <div className="d-flex carousel justify-content-md-between align-items-md-center">
