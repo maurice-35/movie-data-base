@@ -24,7 +24,6 @@ const Home = () => {
                     src="https://res.cloudinary.com/doe5zwesw/image/upload/v1627127892/Project%204/f2_ziewzk.jpg"
                     alt="First slide"
                   />
-                  
                   <p className="text-monospace"><q>New Generation Entertainment!</q> The Beatles and Us</p>
                   <h3>First slide label</h3>
                   <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
@@ -49,6 +48,7 @@ const Home = () => {
                     src="https://res.cloudinary.com/doe5zwesw/image/upload/v1627288579/Project%204/f17_vdqvi6.jpg"
                     alt="Third slide"
                   />
+                  
                   <h3>Third slide label</h3>
                   <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
                 </div>
@@ -73,6 +73,7 @@ const Home = () => {
   )
 }
 export default Home
+
 
 
 
