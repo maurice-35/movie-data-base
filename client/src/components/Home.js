@@ -20,14 +20,10 @@ const Home = () => {
                 <div className="d-flex carousel justify-content-md-between align-items-md-center">
                   <img
                     className="d-block w-100"
-                    src="https://res.cloudinary.com/doe5zwesw/image/upload/v1627080103/Project%204/f1_zb0c0k.jpg"
+                    src="https://res.cloudinary.com/doe5zwesw/image/upload/v1627127892/Project%204/f2_ziewzk.jpg"
                     alt="First slide"
                   />
-                  <img
-                    className="d-block w-100"
-                    src="https://res.cloudinary.com/doe5zwesw/image/upload/v1627127892/Project%204/f2_ziewzk.jpg"
-                    alt="Second slide"
-                  />
+                  
                   <p className="text-monospace"><q>New Generation Entertainment!</q> The Beatles and Us</p>
                   <h3>First slide label</h3>
                   <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
@@ -37,7 +33,7 @@ const Home = () => {
                 <div className="d-flex carousel justify-content-md-between align-items-md-center">
                   <img
                     className="d-block w-100"
-                    src="https://res.cloudinary.com/doe5zwesw/image/upload/v1627080103/Project%204/f1_zb0c0k.jpg"
+                    src="https://res.cloudinary.com/doe5zwesw/image/upload/v1627289108/Project%204/f19_pwzr5o.jpg"
                     alt="Second slide"
                   />
                   <p></p>
@@ -49,7 +45,7 @@ const Home = () => {
                 <div className="d-flex carousel justify-content-md-between align-items-md-center">
                   <img
                     className="d-block w-100"
-                    src="https://res.cloudinary.com/doe5zwesw/image/upload/v1627129121/Project%204/f3_usbz2o.jpg"
+                    src="https://res.cloudinary.com/doe5zwesw/image/upload/v1627288579/Project%204/f17_vdqvi6.jpg"
                     alt="Third slide"
                   />
                   <h3>Third slide label</h3>
@@ -60,7 +56,7 @@ const Home = () => {
                 <div className="d-flex carousel justify-content-md-between align-items-md-center">
                   <img
                     className="d-block w-100"
-                    src="https://res.cloudinary.com/doe5zwesw/image/upload/v1627129136/Project%204/f4_lux3nr.jpg"
+                    src="https://res.cloudinary.com/doe5zwesw/image/upload/v1627289545/Project%204/f20_netrun.jpg"
                     alt="Fourth slide"
                   />
                   <h3>Fourth slide label</h3>
