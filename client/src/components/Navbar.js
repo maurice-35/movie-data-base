@@ -15,27 +15,27 @@ const Navbar = () => {
         </div>
         <div className="navbar-start">
           <div className="navbar-item">
-            <Link target="_blank" to="/About Me">About Me</Link>
+            <Link to="/About Me">About Me</Link>
           </div>
         </div>
         <div className="navbar-end">
           <div className="navbar-item">
-            <Link target="_blank" to="/Home">Home</Link>
+            <Link to="/Home">Home</Link>
           </div>
           <div className="navbar-item">
 
           </div>
           <div className="navbar-item">
-            <Link target="_blank" to="/Movies">Movies</Link>
+            <Link to="/Movies">Movies</Link>
           </div>
           <div className="navbar-item">
-            <Link target="_blank" to="/Submit">Submit</Link>
+            <Link to="/Submit">Submit</Link>
           </div>
           <div className="navbar-item">
-            <Link target="_blank" to="/Register">Register</Link>
+            <Link to="/Register">Register</Link>
           </div>
           <div className="navbar-item">
-            <Link target="_blank" to="Login">Login</Link>
+            <Link to="Login">Login</Link>
           </div>
           {/* <div className="navbar-item has-dropdown is-transparent">
             <a className="navbar-link">

@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+// import { Link }  from 'react-router-dom'
 
 
 const MovieIndex = () => {
@@ -22,29 +23,27 @@ const MovieIndex = () => {
 
   return (
     <section className="section">
-      <div id="watch online">
-        <div className="watch-online-container">
-          <div className="column is-multiline">
-            {movies.map(movie => {
-              return (
-                <div key={movie._id} className="column is-one-quarter-desktop is-one-third-tablet">
-                  <div className="card">
-                    <div className="card-header">
-                      {/* <div className="card-header-title">{movie.title}</div> */}
-                      {/* <div className="card-header-title">{movie.title}</div> */}
-                      {/* <iframe src="https://www.youtube.com/non-embed/bHDl+ZTbdQ8" frameBorder="0" allowFullScreen></iframe> */}
-                    </div>
-                    <div className="movie poster">
-                      <figure className="video video-is-1by1">
-                        <video src={movie.video ? movie.video.url : ''} alt={movie.year} />
-                        {/* <video src={movie.video} alt={movie.year} /> */}
-                      </figure>
-                    </div>
-                  </div>
+      <div className="container">
+        <div className="columns is-multiline">
+          {movies.map(movie => 
+
+            <div key={movie._id} className="column is-one-quarter-desktop is-one-third-tablet">
+              <div className="card">
+                <div className="card-header">
+                  <div className="card-herder-title">{movie.title}</div>
                 </div>
-              )
-            })}
-          </div>
+                <div className="card-image">
+                  <figure className="video image -is-1by1">
+                    <iframe width="560" height="315" src={movie.video} alt={movie.title} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                  </figure>
+                </div>
+                <div className="card-container">
+                  <h5>{movie.year}</h5>
+                </div>
+              </div>
+            </div>
+
+          )}
         </div>
       </div>
     </section>
