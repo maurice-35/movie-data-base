@@ -1,4 +1,5 @@
 /* eslint-disable indent */
+import axios from 'axios'
 import React, { useState } from 'react'
 // import Form from 'react-bootstrap/Form'
 
@@ -13,15 +14,19 @@ const Register = () => {
     last_name: '',
     profile_image: '',
   })
-
+  // console.log(formdata)
   const handleChange = (event) => {
     const newFormdata = { ...formdata, [event.target.name]: event.target.value }
     setFormdata(newFormdata)
   }
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
   event.preventDefault()
-    console.log('Submitted')
+    try {
+      await axios.post('/api/movies/register', formdata)
+    } catch (err) {
+      console.log(err)
+    }
   }
 
   console.log('formdata on state', formdata)
@@ -86,20 +91,20 @@ const Register = () => {
               {/* {errors.passwordConfirmation && <p className="help is-danger">{errors.passwordConfirmation}</p>} */}
             </div>
             <div className="field">
-              <label className="label">First name</label>
+              <label className="label">First Name</label>
               <div className="control">
                 <input
-                  placeholder="First Name"
+                  placeholder="First name"
                   onChange={handleChange}
                   name="first_name"
                   value={formdata.first_name}
                 />
               </div>
               <div className="field">
-                <label className="label">Last name</label>
+                <label className="label">Last Name</label>
                 <div className="control">
                   <input
-                    placeholder="Last Name"
+                    placeholder="Last name"
                     onChange={handleChange}
                     name="last_name"
                     value={formdata.last_name}
@@ -110,6 +115,8 @@ const Register = () => {
                   <div className="control">
                     <input
                       placeholder="Upload profile image"
+                      onChange={handleChange}
+                      name="profile_image"
                       value={formdata.profile_image}
                     />
                   </div>
