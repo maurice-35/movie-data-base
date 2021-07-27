@@ -7,13 +7,14 @@ import { useParams } from 'react-router-dom'
 const MovieShow = () => {
   const [movie, setMovie] = useState([])
   const [hasError, setHasError] = useState(false)
-  const { id } = useParams
+  const { id } = useParams()
 
   useEffect(() => {
     const getData = async () => {
       try {
-        const { data } = await axios.get(`/api/movies${id}`)
+        const { data } = await axios.get(`/api/movies/${id}`)
         setMovie(data)
+        console.log(data)
       } catch (err) {
         setHasError(true)
       }
@@ -34,7 +35,7 @@ const MovieShow = () => {
             <div className="columns">
               <div className="column is-half">
                 <figure className="image">
-                  <img src={movie.video} alt={movie.title} />
+                  <iframe width="980" height="581" src={ movie.video } title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                 </figure>
               </div>
               <div className="column is-half">
