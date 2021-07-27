@@ -6,18 +6,23 @@ import { useParams } from 'react-router-dom'
 
 const MovieShow = () => {
   const [movie, setMovie] = useState([])
+  const [hasError, setHasError] = useState(false)
   const { id } = useParams
 
   useEffect(() => {
     const getData = async () => {
-      const { data } = await axios.get(`/api/movies${id}`)
-      setMovie(data)
+      try {
+        const { data } = await axios.get(`/api/movies${id}`)
+        setMovie(data)
+      } catch (err) {
+        setHasError(true)
+      }
     }
     getData()
   }, [id])
-  console.log('params', id)
+  // console.log('params', id)
 
-  console.log('Movie', movie)
+  // console.log('Movie', movie)
 
   return (
     <section className="section">
@@ -29,7 +34,7 @@ const MovieShow = () => {
             <div className="columns">
               <div className="column is-half">
                 <figure className="image">
-                  <img src={movie.video} alt={movie.title}/>
+                  <img src={movie.video} alt={movie.title} />
                 </figure>
               </div>
               <div className="column is-half">
@@ -39,8 +44,6 @@ const MovieShow = () => {
                 <h4 className="title is-4"><span role="img" aria-label="globe">🌍</span>Audio_language</h4>
                 <hr />
                 <p>{movie.audio_language}</p>
-                <hr />
-                <h4 className="title is-4"><span role="img" aria-label="wave">🖐</span> Added By</h4>
                 <hr />
                 <h4 className="title is-4"><span role="img" aria-label="globe">🌍</span>Run_time_mins</h4>
                 <hr />
@@ -56,7 +59,9 @@ const MovieShow = () => {
                 <hr />
                 <h4 className="title is-4"><span role="img" aria-label="globe">🌍</span>Worth_a_watch</h4>
                 <hr />
-                <p>{movie.audio_worth_a_watch}</p>
+                <p>{movie.video_worth_a_watch}</p>
+                <hr />
+                <h4 className="title is-4"><span role="img" aria-label="wave">🖐</span> Added By</h4>
                 <hr />
                 {/* <p>{movie.user.username}</p>
                 <hr /> */}
@@ -71,14 +76,14 @@ const MovieShow = () => {
           </div>
           :
           <h2 className="title has-text-centered">
-            {hasError ? 'Oh something went wrong, the sadness 😞' : '...loading  '}
+            {hasError ? 'Oh something went wrong, the sadness 😞' : '...loading 📀'}
           </h2>
         }
       </div>
     </section>
-      
+
   )
-        
+
 }
 
 export default MovieShow
