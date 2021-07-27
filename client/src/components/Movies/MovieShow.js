@@ -59,7 +59,7 @@ const MovieShow = () => {
                 <hr />
                 <h4 className="title is-4"><span role="img" aria-label="globe">👀</span>Worth_a_watch</h4>
                 <hr />
-                <p>{movie.video_worth_a_watch}</p>
+                <p>{movie.Worth_a_watch}</p>
                 <hr />
                 <h4 className="title is-4"><span role="img" aria-label="wave">☝🏻☝</span> Added By</h4>
                 <hr />
