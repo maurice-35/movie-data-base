@@ -38,30 +38,30 @@ const MovieShow = () => {
                 </figure>
               </div>
               <div className="column is-half">
-                <h4 className="title is-4"><span role="img" aria-label="plate">🍽</span> Description</h4>
+                <h4 className="title is-4"><span role="img" aria-label="plate"></span> Description</h4>
                 <p>{movie.description}</p>
                 <hr />
-                <h4 className="title is-4"><span role="img" aria-label="globe">🌍</span>Audio_language</h4>
+                <h4 className="title is-4"><span role="img" aria-label="globe">🔊</span>Audio_language</h4>
                 <hr />
                 <p>{movie.audio_language}</p>
                 <hr />
-                <h4 className="title is-4"><span role="img" aria-label="globe">🌍</span>Run_time_mins</h4>
+                <h4 className="title is-4"><span role="img" aria-label="globe">🕰</span>Run_time_mins</h4>
                 <hr />
                 <p>{movie.run_time_mins}</p>
                 <hr />
-                <h4 className="title is-4"><span role="img" aria-label="globe">🌍</span>Year</h4>
+                <h4 className="title is-4"><span role="img" aria-label="globe">🗓</span>Year</h4>
                 <hr />
                 <p>{movie.year}</p>
                 <hr />
-                <h4 className="title is-4"><span role="img" aria-label="globe">🌍</span>Views_count</h4>
+                <h4 className="title is-4"><span role="img" aria-label="globe">⏱</span>Views_count</h4>
                 <hr />
                 <p>{movie.views_count}</p>
                 <hr />
-                <h4 className="title is-4"><span role="img" aria-label="globe">🌍</span>Worth_a_watch</h4>
+                <h4 className="title is-4"><span role="img" aria-label="globe">👀</span>Worth_a_watch</h4>
                 <hr />
                 <p>{movie.video_worth_a_watch}</p>
                 <hr />
-                <h4 className="title is-4"><span role="img" aria-label="wave">🖐</span> Added By</h4>
+                <h4 className="title is-4"><span role="img" aria-label="wave">☝🏻☝</span> Added By</h4>
                 <hr />
                 {/* <p>{movie.user.username}</p>
                 <hr /> */}
