@@ -35,7 +35,7 @@ const MovieShow = () => {
             <div className="columns">
               <div className="column is-half">
                 <figure className="image">
-                  <iframe width="980" height="581" src={ movie.video } title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                  <iframe width="581" height="481" src={ movie.video } title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                 </figure>
               </div>
               <div className="column is-half">
