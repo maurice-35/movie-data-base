@@ -1,6 +1,6 @@
 /* eslint-disable indent */
-import axios from 'axios'
 import React, { useState } from 'react'
+import axios from 'axios'
 // import Form from 'react-bootstrap/Form'
 
 
@@ -23,13 +23,15 @@ const Register = () => {
   const handleSubmit = async (event) => {
   event.preventDefault()
     try {
-      await axios.post('/api/movies/register', formdata)
+      await axios.post('/api/register', formdata)
     } catch (err) {
-      console.log(err)
+      console.log(err.response)
     }
+    // setFormdata()
   }
 
-  console.log('formdata on state', formdata)
+
+  // console.log('formdata on state', formdata)
   return (
     <section className="section">
       <div className="container">

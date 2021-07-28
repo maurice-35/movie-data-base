@@ -15,7 +15,7 @@ const Home = () => {
 
               </div>
             </div>
-            <video src="https://res.cloudinary.com/doe5zwesw/video/upload/v1627301742/Project%204/v2_aeym6w.webm"/>
+            <iframe width="560" height="315" src="https://res.cloudinary.com/doe5zwesw/video/upload/v1627301742/Project%204/v2_aeym6w.webm"frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
             <Carousel>
               <Carousel.Item>
                 <div className="d-flex carousel justify-content-md-between align-items-md-center">

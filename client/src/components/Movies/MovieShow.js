@@ -33,12 +33,12 @@ const MovieShow = () => {
             <h2 className="title has-text-centered">{movie.title}</h2>
             <hr />
             <div className="columns">
-              <div className="column is-half">
+              <div className="column is-three-quarters">
                 <figure className="image">
-                  <iframe width="581" height="481" src={ movie.video } title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                  <iframe width="1000" height="581" src={ movie.video } title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                 </figure>
               </div>
-              <div className="column is-half">
+              <div className="column one-quarter">
                 <h4 className="title is-4"><span role="img" aria-label="plate"></span> Description</h4>
                 <p>{movie.description}</p>
                 <hr />

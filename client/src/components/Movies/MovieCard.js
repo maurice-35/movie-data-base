@@ -9,7 +9,7 @@ const MovieCard = ({ id, image, title, year }) => {
       <Link to={`/movies/${id}`}>
         <div className="card">
           <div className="card-header">
-            <div className="card-herder-title">{title}</div>
+            <div className="card-header-title">{title}</div>
           </div>
           <div className="card-image">
             <figure className="image image -is-1by1">
