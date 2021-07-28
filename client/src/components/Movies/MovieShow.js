@@ -26,19 +26,19 @@ const MovieShow = () => {
   // console.log('Movie', movie)
 
   return (
-    <section className="section">
+    <section id="body-content" className="section">
       <div className="container">
         {movie ?
           <div>
             <h2 className="title has-text-centered">{movie.title}</h2>
             <hr />
             <div className="columns">
-              <div className="column is-three-quarters">
+              <div className="d-block w-100">
                 <figure className="image">
                   <iframe width="1000" height="581" src={ movie.video } title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                 </figure>
               </div>
-              <div className="column one-quarter">
+              <div className="others">
                 <h4 className="title is-4"><span role="img" aria-label="plate"></span> Description</h4>
                 <p>{movie.description}</p>
                 <hr />
