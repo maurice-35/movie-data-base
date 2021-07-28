@@ -23,11 +23,11 @@ const Register = () => {
   const handleSubmit = async (event) => {
   event.preventDefault()
     try {
-      await axios.post('/api/register', formdata)
+      await axios.post('/api/auth/register/', formdata)
     } catch (err) {
       console.log(err.response)
     }
-    // setFormdata()
+    // console.log(formdata)
   }
 
 
@@ -86,8 +86,8 @@ const Register = () => {
                   // className={`input ${errors.passwordConfirmation ? 'is-danger' : ''}`}
                   placeholder="Password Confirmation"
                   onChange={handleChange}
-                  name="passwordConfirmation"
-                  value={formdata.passwordConfirmation}
+                  name="password_confirmation"
+                  value={formdata.password_confirmation}
                 />
               </div>
               {/* {errors.passwordConfirmation && <p className="help is-danger">{errors.passwordConfirmation}</p>} */}
