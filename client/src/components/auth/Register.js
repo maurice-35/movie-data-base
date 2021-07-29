@@ -42,61 +42,57 @@ const Register = () => {
     <section className="section">
       <div className="container">
         <div className="columns">
-          <form onSubmit={handleSubmit} className="column is-half is-offset-one-quarter box">
+          <form className="column is-half is-offset-one-quarter box" onSubmit={handleSubmit}>
             <div className="field">
               <label className="label">Username</label>
               <div className="control">
                 <input
-                  // className={`input ${errors.username ? 'is-danger' : ''}`}
                   placeholder="Username"
                   onChange={handleChange}
                   name="username"
                   value={formdata.username}
                 />
               </div>
-              {/* {errors.username && <p className="help is-danger">{errors.username}</p>} */}
+              
             </div>
             <div className="field">
               <label className="label">Email</label>
               <div className="control">
                 <input
-
-                  // className={`input ${errors.email ? 'is-danger' : ''}`}
                   placeholder="Email"
                   onChange={handleChange}
                   name="email"
                   value={formdata.email}
                 />
               </div>
-              {/* {errors.email && <p className="help is-danger">{errors.email}</p>} */}
+              
             </div>
             <div className="field">
               <label className="label">Password</label>
               <div className="control">
                 <input
                   type="password"
-                  // className={`input ${errors.password ? 'is-danger' : ''}`}
                   placeholder="Password"
                   onChange={handleChange}
                   name="password"
                   value={formdata.password}
                 />
               </div>
-              {/* {errors.password && <p className="help is-danger">{errors.password}</p>} */}
             </div>
+
             <div className="field">
               <label className="label">Password Confirmation</label>
               <div className="control">
                 <input
                   type="password"
-                  // className={`input ${errors.passwordConfirmation ? 'is-danger' : ''}`}
+                  
                   placeholder="Password Confirmation"
                   onChange={handleChange}
                   name="password_confirmation"
                   value={formdata.password_confirmation}
                 />
               </div>
-              {/* {errors.passwordConfirmation && <p className="help is-danger">{errors.passwordConfirmation}</p>} */}
+              
             </div>
             <div className="field">
               <label className="label">First Name</label>

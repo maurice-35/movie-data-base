@@ -28,10 +28,11 @@ const Login = () => {
     event.preventDefault()
     try {
       const { data } = await axios.post('/api/auth/login/', formdata)
-      console.log('token', data.token)
+      // console.log('token', data.token)
       setTokenToLocalStorage(data.token)
+      history.pushState('/images')
     } catch (err) {
-      console.log(err.response)
+      console.log(err)
     }
     console.log(formdata)
   }
@@ -41,7 +42,7 @@ const Login = () => {
     <section className="section">
       <div className="container">
         <div className="columns">
-          <form onSubmit={ handleSubmit }className="column is-half is-offset-one-quarter box">
+          <form className="column is-half is-offset-one-quarter box" onSubmit={handleSubmit}>
             <div className="field">
               <label className="label">Email</label>
               <div className="control">

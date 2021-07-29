@@ -5,6 +5,21 @@ import { Link } from 'react-router-dom'
 
 const Navbar = () => {
 
+  const getTokenFromLocalStorage = () => {
+    return window.localStorage.getItem('token')
+    // history.push('/')
+  }
+
+  const getPayload = () => {
+    const token = getTokenFromLocalStorage()
+    if (!token) return
+    const splitToken = token.split('.')
+    if (splitToken.leength < 3) return
+    console.log('decoded token', atob(splitToken[1]))
+
+  }
+  getPayload()
+
   return (
     <nav className="navbar is-dark">
       <div className="container">
@@ -30,7 +45,7 @@ const Navbar = () => {
             <Link to="/Register">Register</Link>
           </div>
           <div className="navbar-item">
-            <Link to="Login">Login</Link>
+            <Link to="Login">Login </Link>
           </div>
         </div>
       </div>
