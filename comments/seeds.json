@@ -3,18 +3,30 @@
   "model": "comments.comment",
   "pk": 1,
   "fields": {
-    "text": "This one is so interesting!",
-    "created_at": "2021-07-22T14:10:53.422Z",
-    "movies": 11
+    "text": "Cool movie!",
+    "created_at": "2021-07-27T12:13:45.455Z",
+    "movies": 1,
+    "owner": 1
+  }
+},
+{
+  "model": "comments.comment",
+  "pk": 2,
+  "fields": {
+    "text": "You'll love this!",
+    "created_at": "2021-07-27T13:58:09.379Z",
+    "movies": 3,
+    "owner": 1
   }
 },
 {
   "model": "comments.comment",
   "pk": 3,
   "fields": {
-    "text": "I really enjoyed watching this!",
-    "created_at": "2021-07-22T16:52:54.935Z",
-    "movies": 5
+    "text": "Crazy!",
+    "created_at": "2021-07-27T14:22:44.022Z",
+    "movies": 4,
+    "owner": 1
   }
 }
 ]

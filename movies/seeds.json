@@ -1,128 +1,114 @@
 [
 {
   "model": "movies.movie",
+  "pk": 1,
+  "fields": {
+    "title": "National Security",
+    "description": "Earl and Hank have only one thing in common: they're both L.A.P.D. rejects. One just got kicked out of the force--the other can't ...",
+    "image": "https://res.cloudinary.com/doe5zwesw/image/upload/v1627385989/Project%204/go1_muzbxw.webp",
+    "video": "https://www.youtube.com/embed/87YgGNNQyQA",
+    "audio_language": "English",
+    "run_time_mins": 2,
+    "year": 2003,
+    "views_count": 78375,
+    "worth_a_watch": true
+    
+  }
+},
+{
+  "model": "movies.movie",
   "pk": 2,
   "fields": {
-    "title": "Random Encounters",
-    "description": "Misunderstandings and missed chances abound after two twenty-somethings have a chance meeting in a coffee shop, then later try to find each other again. See Meghan Markle before she was the Duchess of Sussex!",
-    "image": "https://www.youtube.com/watch?v=loPCgi1S3ac",
+    "title": "Behind Closed Doors",
+    "description": "Stacy is a freshman at a Historic Black College & University. She Meets and falls in love with a Grad Student named Benjamin. He's nice and charming at first. Until he starts to control her and physically, psychologically, and verbally abuse her. Can Stacy get out of this domestic violence relationship before it's too late?",
+    "image": "https://res.cloudinary.com/doe5zwesw/image/upload/v1627396100/Project%204/vi3_qpulag.jpg",
+    "video": "https://www.youtube.com/embed/P9QC2er4x84",
     "audio_language": "English",
-    "run_time": 2,
-    "year": 2013,
-    "views_count": 388800,
-    "worth_a_watch": true
+    "run_time_mins": 86,
+    "year": 2020,
+    "views_count": 29259,
+    "worth_a_watch": true,
+    "owner": 1
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 3,
+  "fields": {
+    "title": "Just Our Luck",
+    "description": "Ema shares with her two best friends the find in her fortune cookie - three fortunes in one and they all read the same - 'your path to finding eternal love begins now'. She reflects on being in love and believes it's just around the corner. Days go by and she becomes disenchanted as her luck in love isn't panning out. Then one day a certain someone mysteriously appears. This shatters her beliefs and Ema comes to understand that a perfect fit for one may not be the same for another.",
+    "image": "https://res.cloudinary.com/doe5zwesw/image/upload/v1627397465/Project%204/vi3_t4cyb9.jpg",
+    "video": "https://www.youtube.com/embed/zr92kSIVHAE",
+    "audio_language": "English",
+    "run_time_mins": 78,
+    "year": 2016,
+    "views_count": 53665,
+    "worth_a_watch": true,
+    "owner": 1
   }
 },
 {
   "model": "movies.movie",
   "pk": 4,
   "fields": {
-    "title": "London O'clock",
-    "description": "Hindi Dubbed Blockbuster Action Movie. Lastest Action Movie 2020 Full Length English Hollywood Blockbuster Hindi Dubbed Action Movie",
-    "image": "https://www.youtube.com/watch?v=Qc5sc0Wq8aU",
+    "title": "Wannabe Rocker",
+    "description": "In a world of pop-stars Phaedra is struggling to make it as a rocker. Plagued with bad luck and disown by her parents she has all but given up on her dream. Phaedra's friends, however, are determined to show the industry what it is missing. Their outlandish plan to attract record producers by throwing a pretend party for Cher just might work. Who said there's anything wrong with a little creative lying; it might be your only to the top?.",
+    "image": "https://res.cloudinary.com/doe5zwesw/image/upload/v1627395651/Project%204/vi4_tl7yh5.jpg",
+    "video": "https://www.youtube.com/embed/ZPK5zNNzy3Q",
     "audio_language": "English",
-    "run_time": 1,
-    "year": 2021,
-    "views_count": 3813,
-    "worth_a_watch": true
+    "run_time_mins": 78,
+    "year": 2010,
+    "views_count": 1144,
+    "worth_a_watch": true,
+    "owner": 1
   }
 },
 {
   "model": "movies.movie",
   "pk": 5,
   "fields": {
-    "title": "Tulips in Spring",
-    "description": "Love finds you in Valentine is a New Love Hallmark Movies 2021",
-    "image": "https://www.youtube.com/watch?v=YEbXZl6qdkk",
+    "title": "PURGATORY",
+    "description": "Grieving widower, Bernard, is approached by a spiritual healer and a voodoo high priest with an enticing offer to reconnect with his late wife, Sophia, in the afterlife. In the process, Bernard faces spirits, demons, and life-altering secrets.",
+    "image": "https://res.cloudinary.com/doe5zwesw/image/upload/v1627485333/Project%204/vi5_yipzsy.jpg",
+    "video": "https://www.youtube.com/embed/1KZNQ0yn1GU",
     "audio_language": "English",
-    "run_time": 1,
+    "run_time_mins": 84,
     "year": 2021,
-    "views_count": 382025,
-    "worth_a_watch": true
+    "views_count": 3310,
+    "worth_a_watch": true,
+    "owner": 1
   }
 },
 {
   "model": "movies.movie",
   "pk": 6,
   "fields": {
-    "title": "Stolen Virginity - A Woman's Most Prized Possession",
-    "description": "Life is all about give and take. At some point, we all have to choose a side. Travis was working his dream job, but his boss was a nightmare. When his back was against the wall, he chose to be a 'Taker'. This time he went too far... he stole a woman's most prized possession.",
-    "image": "https://www.youtube.com/watch?v=pCW-v4AWy1o",
+    "title": "Hollywood Road Trip",
+    "description": "Chaz, a vintage magazine collector, decides to go on a road trip with his friends to Hollywood after discovering his landlord's plot to find and hurt its long time founder and CEO. With everything at stake, he is forced to choose between his magazine collection, his best friends, his dream girl or saving an innocent man's life.",
+    "image": "https://res.cloudinary.com/doe5zwesw/image/upload/v1627485809/Project%204/VI6_pjmk3s.jpg",
+    "video": "https://www.youtube.com/embed/gXV00XfBvsY",
     "audio_language": "English",
-    "run_time": 1,
-    "year": 2018,
-    "views_count": 1009800,
-    "worth_a_watch": true
+    "run_time_mins": 99,
+    "year": 2015,
+    "views_count": 48334,
+    "worth_a_watch": true,
+    "owner": 1
   }
 },
 {
   "model": "movies.movie",
   "pk": 7,
   "fields": {
-    "title": "The Gateway",
-    "description": "A Theory That Suggest That Parallel Worlds Exist, And That They Interact With Our Worlds.",
-    "image": "https://www.youtube.com/watch?v=HXfJbYFNZBs",
+    "title": "King of special forces",
+    "description": "Powerful Action movie.",
+    "image": "https://res.cloudinary.com/doe5zwesw/image/upload/v1627486593/Project%204/vi7_udt6l7.webp",
+    "video": "https://www.youtube.com/embed/uzHrR5slXdc",
     "audio_language": "English",
-    "run_time": 1,
+    "run_time_mins": 99,
     "year": 2021,
-    "views_count": 126000,
-    "worth_a_watch": true
-  }
-},
-{
-  "model": "movies.movie",
-  "pk": 8,
-  "fields": {
-    "title": "The Equalizer",
-    "description": "A Denzel Washington Film",
-    "image": "https://www.youtube.com/watch?v=jt5WMVzsFnQ",
-    "audio_language": "English",
-    "run_time": 1,
-    "year": 2020,
-    "views_count": 399445,
-    "worth_a_watch": true
-  }
-},
-{
-  "model": "movies.movie",
-  "pk": 9,
-  "fields": {
-    "title": "King of Special Forces",
-    "description": "An Open Road Film by Endgame Entertainment and Millennium",
-    "image": "https://www.youtube.com/watch?v=uzHrR5slXdc",
-    "audio_language": "English",
-    "run_time": 1,
-    "year": 2021,
-    "views_count": 3666948,
-    "worth_a_watch": true
-  }
-},
-{
-  "model": "movies.movie",
-  "pk": 10,
-  "fields": {
-    "title": "The Old Guard",
-    "description": "A tormented god-like creature, an immortal who has spent centuries trying to save humanity but is beginning to wonder whether it was worth all the trouble. Theron draws you in, and keeps you hooked.",
-    "image": "https://youtu.be/aK-X2d0lJ_s",
-    "audio_language": "English",
-    "run_time": 2,
-    "year": 2017,
-    "views_count": 3445009,
-    "worth_a_watch": true
-  }
-},
-{
-  "model": "movies.movie",
-  "pk": 11,
-  "fields": {
-    "title": "The Pursuit Of Happyness: Job interview",
-    "description": "What’s happening in this movie clip? After spending the night in jail, Christ (Will Smith) goes directly to his job interview. Despite his non-professional appearance, he impresses the interviewers.",
-    "image": "https://www.youtube.com/watch?v=UUDKEbX5OQw",
-    "audio_language": "English",
-    "run_time": 1,
-    "year": 2020,
-    "views_count": 7082500,
-    "worth_a_watch": true
+    "views_count": 4932486,
+    "worth_a_watch": true,
+    "owner": 1
   }
 }
 ]

@@ -6,10 +6,10 @@ const Login = () => {
 
   return (
     <Form>
-      <Form.Group className="mb-3" controlId="formBasicEmail">
+      {/* <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>User name</Form.Label>
         <Form.Control type="username" placeholder="Enter username" />
-      </Form.Group>
+      </Form.Group> */}
 
       <Form.Group className="mb-3" controlId="formBasicPassword">
         <Form.Label>Email</Form.Label>
