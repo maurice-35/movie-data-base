@@ -52,8 +52,8 @@ const Navbar = () => {
                   <Link className="button is-dark" to="/home">
                     Home
                   </Link>
-                  <Link className="button is-dark" to="/Add Movies">
-                    Add Movies
+                  <Link className="button is-dark" to="/Movies/AddMovies">
+                    AddMovies
                   </Link>
             
                   <Link to="/movies" className="navbar-item">Movies</Link>

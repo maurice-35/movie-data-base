@@ -6,7 +6,7 @@ import Login from './components/auth/Login'
 import Home from './components/common/Home'
 import MovieIndex from './components/Movies/MovieIndex'
 import MovieShow from './components/Movies/MovieShow'
-import MovieNew from './components/Movies/MovieNew'
+import AddMovies from './components/Movies/AddMovies'
 import Navbar from './components/common/Navbar'
 import Profile from './components/userProfile/Profile'
 import Footer from './components/Footer'
@@ -20,8 +20,8 @@ const App = () => {
     <BrowserRouter>
       <Navbar />
       <Switch>
-        <Route path='/movies/new' component={MovieNew} />
-        <Route path="/movies/:id" component={MovieShow} />
+        <Route path='/Movies/AddMovies' component={AddMovies} />
+        <Route path='/Movies/:id' component={MovieShow} />
         <Route path="/Movies" component={MovieIndex} />
         <Route path="/user" component={Profile} />
         <Route path="/login" component={Login} />
