@@ -18,7 +18,9 @@ const Login = () => {
   }
   console.log(formdata)
 
-
+  const setTokenToLocalStorage = (token) => {
+    window.localStorage.setItem('token', token)
+  }
 
   const handleSubmit = async (event) => {
     console.log('FUNCTION RUNNING')
@@ -26,6 +28,7 @@ const Login = () => {
     try {
       const { data } = await axios.post('/api/auth/login/', formdata)
       console.log('token', data.token)
+      setTokenToLocalStorage(data.token)
     } catch (err) {
       console.log(err.response)
     }
@@ -56,6 +59,7 @@ const Login = () => {
               <div className="control">
                 <input
                   // className={`input ${errors.email ? 'is-danger' : ''}`}
+                  type="password"
                   placeholder="Password"
                   onChange={handleChange}
                   name="password"
