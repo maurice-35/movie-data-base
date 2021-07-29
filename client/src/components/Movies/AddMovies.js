@@ -1,8 +1,15 @@
 import React, { useState } from 'react'
+// import { useHistory } from 'react-router-dom'
+import axios from 'axios'
+import { getTokenFromLocalStorage } from '../../helpers/auth'
+// import CheeseForm from './CheeseForm'
+
+
 
 
 
 const AddMovies = () => {
+
   // const history = useHistory()
   const [formData, setFormData] = useState({
     title: '',
@@ -36,11 +43,20 @@ const AddMovies = () => {
     setFormData(newFormData)
     setErrors(newErrors)
   }
+  console.log('changing')
 
-  
   const handleSubmit = async (event) => {
     event.preventDefault()
-    
+    try {
+      await axios.post('/api/auth/movies/', formData,
+        {
+          headers: { Authorization: `Bearer ${getTokenFromLocalStorage()}` },
+        })
+
+      history.push('/movies')
+    } catch (err) {
+      setErrors(err.response.data.errors)
+    }
   }
 
   return (
@@ -100,7 +116,7 @@ const AddMovies = () => {
             />
           </div>
           {errors.video && <p className="help is-danger">{errors.video}</p>}
-          
+
         </div>
         <div className="field">
           <label className="label">Audio Language</label>
@@ -108,13 +124,13 @@ const AddMovies = () => {
             <input
               className={`input ${errors.audio_language ? 'is-danger' : ''}`}
               placeholder="Audio Language"
-              name="audio language"
+              name="audio_language"
               onChange={handleChange}
               value={formData.audio_language}
             />
           </div>
           {errors.audio_language && <p className="help is-danger">{errors.audio_language}</p>}
-          
+
         </div>
         <div className="field">
           <label className="label">Run time in mins</label>
@@ -123,7 +139,7 @@ const AddMovies = () => {
           <input
             className={`input ${errors.run_time_mins ? 'is-danger' : ''}`}
             placeholder="Run time in mins"
-            name="run_time_in_mins"
+            name="run_time_mins"
             onChange={handleChange}
             value={formData.run_time_mins}
           />
@@ -165,7 +181,7 @@ const AddMovies = () => {
               <input
                 className={`input ${errors.worth_a_watch ? 'is-danger' : ''}`}
                 placeholder="Worth a watch"
-                name="worth a watch"
+                name="worth_a_watch"
                 onChange={handleChange}
                 value={formData.worth_a_watch}
               />
@@ -189,7 +205,7 @@ const AddMovies = () => {
               )}
               <div className="field">
                 <button type="submit" className="button is-warning is-fullwidth">
-                  
+                  submit
                 </button>
               </div>
             </div>
