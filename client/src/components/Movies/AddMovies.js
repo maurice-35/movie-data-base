@@ -65,8 +65,8 @@ const AddMovies = () => {
         <div className="field">
           <label className="label">Description</label>
           <div className="control">
-            <input
-              className={`input ${errors.origin ? 'is-danger' : ''}`}
+            <textarea
+              className={`textarea ${errors.origin ? 'is-danger' : ''}`}
               placeholder="Description"
               name="description"
               onChange={handleChange}
@@ -91,8 +91,8 @@ const AddMovies = () => {
         <div className="field">
           <label className="label">Video</label>
           <div className="control">
-            <textarea
-              className={`textarea ${errors.video ? 'is-danger' : ''}`}
+            <input
+              className={`input ${errors.video ? 'is-danger' : ''}`}
               placeholder="Video URL"
               name="video"
               onChange={handleChange}
@@ -105,8 +105,8 @@ const AddMovies = () => {
         <div className="field">
           <label className="label">Audio Language</label>
           <div className="control">
-            <textarea
-              className={`textarea ${errors.audio_language ? 'is-danger' : ''}`}
+            <input
+              className={`input ${errors.audio_language ? 'is-danger' : ''}`}
               placeholder="Audio Language"
               name="audio language"
               onChange={handleChange}
@@ -120,8 +120,8 @@ const AddMovies = () => {
           <label className="label">Run time in mins</label>
           <div className="control">
           </div>
-          <textarea
-            className={`textarea ${errors.run_time_mins ? 'is-danger' : ''}`}
+          <input
+            className={`input ${errors.run_time_mins ? 'is-danger' : ''}`}
             placeholder="Run time in mins"
             name="run_time_in_mins"
             onChange={handleChange}
@@ -134,8 +134,8 @@ const AddMovies = () => {
         <div className="field">
           <label className="label">Year</label>
           <div className="control">
-            <textarea
-              className={`textarea ${errors.year ? 'is-danger' : ''}`}
+            <input
+              className={`input ${errors.year ? 'is-danger' : ''}`}
               placeholder="Year"
               name="year"
               onChange={handleChange}
@@ -148,8 +148,8 @@ const AddMovies = () => {
         <div className="field">
           <label className="label">View count</label>
           <div className="control">
-            <textarea
-              className={`textarea ${errors.view_count ? 'is-danger' : ''}`}
+            <input
+              className={`input ${errors.view_count ? 'is-danger' : ''}`}
               placeholder="View count"
               name="view_count"
               onChange={handleChange}
@@ -162,8 +162,8 @@ const AddMovies = () => {
           <div className="field">
             <label className="label">Worth a watch</label>
             <div className="control">
-              <textarea
-                className={`textarea ${errors.worth_a_watch ? 'is-danger' : ''}`}
+              <input
+                className={`input ${errors.worth_a_watch ? 'is-danger' : ''}`}
                 placeholder="Worth a watch"
                 name="worth a watch"
                 onChange={handleChange}
@@ -176,8 +176,8 @@ const AddMovies = () => {
             <div className="field">
               <label className="label">Owner</label>
               <div className="control">
-                <textarea
-                  className={`textarea ${errors.owner ? 'is-danger' : ''}`}
+                <input
+                  className={`input ${errors.owner ? 'is-danger' : ''}`}
                   placeholder="Owner"
                   name="owner"
                   onChange={handleChange}
