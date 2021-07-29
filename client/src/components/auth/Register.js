@@ -24,7 +24,7 @@ const Register = () => {
 
   const handleSubmit = async (event) => {
     console.log('FUNCTION RUNNING')
-  event.preventDefault()
+    event.preventDefault()
     try {
       await axios.post('/api/auth/register/', formdata)
     } catch (err) {
@@ -95,7 +95,7 @@ const Register = () => {
               </div>
               {/* {errors.passwordConfirmation && <p className="help is-danger">{errors.passwordConfirmation}</p>} */}
             </div>
-            {/* <div className="field">
+            <div className="field">
               <label className="label">First Name</label>
               <div className="control">
                 <input
@@ -124,14 +124,19 @@ const Register = () => {
                       name="profile_image"
                       value={formdata.profile_image}
                     />
-                  </div> */}
+                  </div>
                   <div className="field">
                     <button type="submit" className="button is-fullwidth is-warning">Register Me!</button>
                   </div>
+                </div>
+              </div>
+            </div>
           </form>
         </div>
       </div>
     </section>
+
+
     // <Form>
     //   <Form.Group className="mb-3" controlId="formBasicEmail">
     //     <Form.Label>User name</Form.Label>
