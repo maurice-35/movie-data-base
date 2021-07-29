@@ -1,13 +1,12 @@
 /* eslint-disable indent */
 import React, { useState } from 'react'
 import axios from 'axios'
-// import useHistory from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 
 
 const Login = () => {
-  // const history = useHistory()
+  const history = useHistory()
   const [formdata, setFormdata] = useState({
-
     email: '',
     password: '',
   })
@@ -28,13 +27,13 @@ const Login = () => {
     event.preventDefault()
     try {
       const { data } = await axios.post('/api/auth/login/', formdata)
-      // console.log('token', data.token)
+      console.log('token', data.token)
       setTokenToLocalStorage(data.token)
-      history.pushState('/images')
+      history.push('/movies')
     } catch (err) {
       console.log(err)
     }
-    console.log(formdata)
+    // console.log(formdata)
   }
 
 
