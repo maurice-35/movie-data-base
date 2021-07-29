@@ -3,19 +3,12 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import About from './components/About'
 import Register from './components/auth/Register'
 import Login from './components/auth/Login'
-import Home from './components/Home'
+import Home from './components/common/Home'
 import MovieIndex from './components/Movies/MovieIndex'
 import MovieShow from './components/Movies/MovieShow'
-
-
-import Navbar from './components/Navbar'
+import Navbar from './components/common/Navbar'
 import Footer from './components/Footer'
 
-// const App = () => {
-
-// import React from 'react'
-// import axios from 'axios'
-// import { Carousel } from 'react-bootstrap'
 
 const App = () => {
 

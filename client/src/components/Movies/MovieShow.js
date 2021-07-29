@@ -6,7 +6,7 @@ import { useParams } from 'react-router-dom'
 
 const MovieShow = () => {
   const [movie, setMovie] = useState([])
-  const [hasError, setHasError] = useState(false)
+  const [hasError, setHasError] = useState(true)
   const { id } = useParams()
 
   useEffect(() => {
