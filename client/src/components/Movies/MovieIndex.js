@@ -21,7 +21,7 @@ const MovieIndex = () => {
     getData()
   }, [])
 
-  // console.log('MOVIES ON STATE', movies)
+  console.log('MOVIES ON STATE', movies)
 
   return (
     <section className="section">

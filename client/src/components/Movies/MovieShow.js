@@ -11,21 +11,25 @@ const MovieShow = () => {
   const { id } = useParams()
 
   useEffect(() => {
+    console.log('USE')
     const getData = async () => {
+      console.log('Try')
       try {
         const { data } = await axios.get(`/api/movies/${id}`)
         setMovie(data)
-        console.log(data)
+        console.log('DATA', data)
       } catch (err) {
         setHasError(true)
+        console.log('Error', err)
       }
     }
     getData()
-  }, [id])
-
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+  console.log('working')
   console.log('params', id)
 
-  // console.log('Movie', movie)
+  // console.log('Movie', movie.owner.username)
 
   const userIsOwner = (userId) => {
     const payload = getPayload()
@@ -82,14 +86,14 @@ const MovieShow = () => {
                   <h4 className="title is-4"><span role="img" aria-label="point">☝🏻☝</span> Added By</h4>
                   <hr />
                 </div>
-                {/* <p>{movie.user.username}</p>
-                <hr /> */}
-                {/* {userIsOwner(movie.user._id) && */}
+                <p>{movie.owner.username}</p>
+                <hr />
+                {/* {userIsOwner(movie.owner.id) && */}
                 <div className="buttons">
                   <button className="button is-danger">Delete Movie</button>
                   <Link to={`/movies/${id}/edit`} className="button is-warning">Edit Movie</Link>
                 </div>
-
+                
               </div>
             </div>
           </div>
