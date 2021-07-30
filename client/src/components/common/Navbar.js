@@ -28,21 +28,27 @@ const Navbar = () => {
     return now < payload.exp
 
   }
-  
+
 
   return (
     <nav className="navbar is-dark">
       <div className="container">
         <div className="navbar-brand">
           <div className={`navbar-menu ${isActive ? 'is-active' : ''}`}>
-            <span><Link to="navbar-menu" onClick={handleMenuToggle}>Gallery📀</Link>
+            <span><Link to="navbar-menu" onClick={handleMenuToggle}>📀</Link>
             </span>
           </div>
           <div className="navbar-start">
             <div className="navbar-item">
               <Link to="/About Me">About Me</Link>
             </div>
+            <div>
+              <Link to="/movies" className="navbar-item">Back To Movies</Link>
+              {userIsAuthenticated() && <Link to="/movies/new" className="navbar-item">Add Movies</Link>}
+            </div>
           </div>
+
+
           <div className="navbar-end">
             {!userIsAuthenticated() ?
 
@@ -51,10 +57,10 @@ const Navbar = () => {
                   <Link className="button is-dark" to="/home">
                     Home
                   </Link>
-                  <Link className="button is-dark" to="/Movies/AddMovies">
+                  {/* <Link className="button is-dark" to="/Movies/AddMovies">
                     AddMovies
-                  </Link>
-            
+                  </Link> */}
+
                   <Link to="/movies" className="navbar-item">Movies</Link>
                 </div>
                 <Link className="button is-dark" to="/register">

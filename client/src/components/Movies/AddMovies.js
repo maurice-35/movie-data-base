@@ -70,7 +70,7 @@ const AddMovies = () => {
           handleSubmit={handleSubmit}
           formData={formData}
           errors={errors}
-          buttonText="Make my Cheese"
+          buttonText="AddMovies"
         />
       </div>
     </section>

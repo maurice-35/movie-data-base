@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
+// import { getTokenFromLocalStorage, getPayload } from '../../helpers/auth'
 
 
 const MovieShow = () => {
@@ -21,10 +22,18 @@ const MovieShow = () => {
     }
     getData()
   }, [id])
-  // console.log('params', id)
+
+  console.log('params', id)
 
   // console.log('Movie', movie)
 
+  const userIsOwner = (userId) => {
+    const payload = getPayload()
+    if (!payload) return false
+    return userId === payload.sub
+  }
+  console.log(userIsOwner)
+  // console.log(payload)
   return (
     <section id="body-content" className="section">
       <div className="container">
@@ -32,38 +41,47 @@ const MovieShow = () => {
           <div>
             <h2 className="title has-text-centered">{movie.title}</h2>
             <hr />
-            <div className="columns">
-              <div className="d-block w-100">
+            <div className="others">
+              <h4 className="title is-4"><span role="img" aria-label="plate"></span> Description</h4>
+              <p>{movie.description}</p>
+              <hr />
+              <div className="column is-half">
                 <figure className="image">
-                  <iframe width="1000" height="581" src={ movie.video } title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                  <img src={movie.image} alt={movie.name} />
                 </figure>
               </div>
-              <div className="others">
-                <h4 className="title is-4"><span role="img" aria-label="plate"></span> Description</h4>
-                <p>{movie.description}</p>
-                <hr />
-                <h4 className="title is-4"><span role="img" aria-label="globe">🔊</span>Audio_language</h4>
-                <hr />
-                <p>{movie.audio_language}</p>
-                <hr />
-                <h4 className="title is-4"><span role="img" aria-label="globe">🕰</span>Run_time_mins</h4>
-                <hr />
-                <p>{movie.run_time_mins}</p>
-                <hr />
-                <h4 className="title is-4"><span role="img" aria-label="globe">🗓</span>Year</h4>
-                <hr />
-                <p>{movie.year}</p>
-                <hr />
-                <h4 className="title is-4"><span role="img" aria-label="globe">⏱</span>Views_count</h4>
-                <hr />
-                <p>{movie.views_count}</p>
-                <hr />
-                <h4 className="title is-4"><span role="img" aria-label="globe">👀</span>Worth_a_watch</h4>
-                <hr />
-                <p>{movie.Worth_a_watch}</p>
-                <hr />
-                <h4 className="title is-4"><span role="img" aria-label="wave">☝🏻☝</span> Added By</h4>
-                <hr />
+              <div className="columns">
+                <div className="d-block w-100">
+                  <div>
+                    <figure className="video">
+                      <iframe width="1000" height="581" src={movie.video} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                    </figure>
+                  </div>
+                </div>
+                <div className="container">
+                  <h4 className="title is-4"><span role="img" aria-label="globe">🔊</span>Audio_language</h4>
+                  <hr />
+                  <p>{movie.audio_language}</p>
+                  <hr />
+                  <h4 className="title is-4"><span role="img" aria-label="globe">🕰</span>Run_time_mins</h4>
+                  <hr />
+                  <p>{movie.run_time_mins}</p>
+                  <hr />
+                  <h4 className="title is-4"><span role="img" aria-label="globe">🗓</span>Year</h4>
+                  <hr />
+                  <p>{movie.year}</p>
+                  <hr />
+                  <h4 className="title is-4"><span role="img" aria-label="globe">⏱</span>Views_count</h4>
+                  <hr />
+                  <p>{movie.views_count}</p>
+                  <hr />
+                  <h4 className="title is-4"><span role="img" aria-label="eyes">👀</span>Worth_a_watch</h4>
+                  <hr />
+                  <p>{movie.Worth_a_watch}</p>
+                  <hr />
+                  <h4 className="title is-4"><span role="img" aria-label="point">☝🏻☝</span> Added By</h4>
+                  <hr />
+                </div>
                 {/* <p>{movie.user.username}</p>
                 <hr /> */}
                 {/* {userIsOwner(movie.user._id) &&
