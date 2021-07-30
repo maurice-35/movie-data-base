@@ -20,13 +20,13 @@ const App = () => {
     <BrowserRouter>
       <Navbar />
       <Switch>
+        <Route path='/About Me' component={About} />
+        <Route path='/Login' component={Login} />
+        <Route path='/Register' component={Register} />
         <Route path='/Movies/AddMovies' component={AddMovies} />
         <Route path='/Movies/:id' component={MovieShow} />
-        <Route path="/Movies" component={MovieIndex} />
-        <Route path="/user" component={Profile} />
-        <Route path="/login" component={Login} />
-        <Route path="/register" component={Register} />
-        <Route path="/about Me" component={About} />
+        <Route path='/Movies' component={MovieIndex} />
+        <Route path='/user' component={Profile} />
         <Route path="/" component={Home} />
       </Switch>
       <Footer />

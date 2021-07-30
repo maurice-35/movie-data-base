@@ -13,7 +13,7 @@ const Navbar = () => {
   }
 
   useEffect(() => {
-    setIsActive(false)
+    setIsActive(true)
   }, [pathname])
 
   const handleLogout = () => {
@@ -28,15 +28,14 @@ const Navbar = () => {
     return now < payload.exp
 
   }
-
-  // handleMenuToggle()
+  
 
   return (
     <nav className="navbar is-dark">
       <div className="container">
         <div className="navbar-brand">
           <div className={`navbar-menu ${isActive ? 'is-active' : ''}`}>
-            <span><Link to="logo">📀 </Link>
+            <span><Link to="navbar-menu" onClick={handleMenuToggle}>Gallery📀</Link>
             </span>
           </div>
           <div className="navbar-start">
