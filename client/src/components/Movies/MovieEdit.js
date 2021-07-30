@@ -5,7 +5,7 @@ const MovieEdit = () => {
 
   return (
     <>
-      <h1>movie edit</h1>
+      <h1>Movie edit</h1>
     </>
   )
 }

@@ -43,8 +43,8 @@ const Navbar = () => {
               <Link to="/About Me">About Me</Link>
             </div>
             <div>
-              <Link to="/movies" className="navbar-item">Back To Movies</Link>
-              {userIsAuthenticated() && <Link to="/movies/new" className="navbar-item">Add Movies</Link>}
+              <Link to="/movies" className="navbar-item"></Link>
+              {userIsAuthenticated() && <Link to="/movies/new" className="navbar-item"> Browse Movies</Link>}
             </div>
           </div>
 
@@ -57,9 +57,6 @@ const Navbar = () => {
                   <Link className="button is-dark" to="/home">
                     Home
                   </Link>
-                  {/* <Link className="button is-dark" to="/Movies/AddMovies">
-                    AddMovies
-                  </Link> */}
 
                   <Link to="/movies" className="navbar-item">Movies</Link>
                 </div>

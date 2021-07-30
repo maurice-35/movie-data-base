@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 // import { getTokenFromLocalStorage, getPayload } from '../../helpers/auth'
 
 
@@ -84,12 +84,12 @@ const MovieShow = () => {
                 </div>
                 {/* <p>{movie.user.username}</p>
                 <hr /> */}
-                {/* {userIsOwner(movie.user._id) &&
-                  <div className="buttons">
-                    <button onClick={handleDelete} className="button is-danger">Delete Movie</button>
-                    <Link to={`/movies/${id}/edit`} className="button is-warning">Edit Movie</Link>
-                  </div>
-                } */}
+                {/* {userIsOwner(movie.user._id) && */}
+                <div className="buttons">
+                  <button className="button is-danger">Delete Movie</button>
+                  <Link to={`/movies/${id}/edit`} className="button is-warning">Edit Movie</Link>
+                </div>
+
               </div>
             </div>
           </div>
