@@ -6,7 +6,7 @@ const MovieCard = ({ id, image, title, year }) => {
   // console.log('props', props)
   return (
     <div className="column is-one-quarter-desktop is-one-third-tablet">
-      <Link to={`/movies/${id}`}>
+      <Link to={`/movies/${id}/`}>
         <div className="card">
           <div className="card-header">
             <div className="card-header-title">{title}</div>

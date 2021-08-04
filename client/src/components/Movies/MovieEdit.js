@@ -36,7 +36,7 @@ const MovieEdit = () => {
   })
   useEffect(() => {
     const getData = async () => {
-      const { data } = await axios.get(`api/movies/${id}`)
+      const { data } = await axios.get(`api/movies/${id}/`)
       console.log('DATA', data)
       setFormData(data)
     }
@@ -54,13 +54,13 @@ const MovieEdit = () => {
     event.preventDefault()
     try {
       await axios.put(
-        `api/movies/${id}`,
+        `api/movies/${id}/`,
         formData,
         {
           headers: { Authorization: `Bearer ${getTokenFromLocalStorage()}` },
         }
       )
-      history.push(`/movies/${id}`)
+      history.push(`/movies/${id}/`)
     } catch (err) {
       setErrors(err.response.data.errors)
     }

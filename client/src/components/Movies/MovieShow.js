@@ -17,7 +17,7 @@ const MovieShow = () => {
     const getData = async () => {
       console.log('Try')
       try {
-        const { data } = await axios.get(`/api/movies/${id}`)
+        const { data } = await axios.get(`/api/movies/${id}/`)
         setMovie(data)
         console.log('DATA', data)
       } catch (err) {
@@ -44,7 +44,7 @@ const MovieShow = () => {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`/api/movies/${id}`, {
+      await axios.delete(`/api/movies/${id}/`, {
         headers: { 
           Authorization: `Bearer ${getTokenFromLocalStorage()}`, 
         },

@@ -12,7 +12,7 @@ const MovieIndex = () => {
   useEffect(() => {
     const getData = async () => {
       try {
-        const { data } = await axios.get('/api/movies')
+        const { data } = await axios.get('/api/movies/')
         setMovies(data)
       } catch (err) {
         setHasErrors(true)
