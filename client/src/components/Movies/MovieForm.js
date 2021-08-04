@@ -18,22 +18,22 @@ const MovieForm = ({
           >
             <div className="field">
               <label className="label">Title</label>
-              <div className="control">
-                <input
-                  className={`input ${errors.title ? 'is-danger' : ''}`}
+              <div className="control"> 
+                <input 
+                  className={`input ${errors?.title ? 'is-danger' : ''}`}
                   placeholder="Title"
                   name="title"
                   onChange={handleChange}
                   value={formData.title}
                 />
               </div>
-              {errors.name && <p className="help is-danger">{errors.name}</p>}
+              {errors.title && <p className="help is-danger">{errors.title}</p>}
             </div>
             <div className="field">
               <label className="label">Description</label>
               <div className="control">
                 <textarea
-                  className={`textarea ${errors.origin ? 'is-danger' : ''}`}
+                  className={`textarea ${errors.description ? 'is-danger' : ''}`}
                   placeholder="Description"
                   name="description"
                   onChange={handleChange}
@@ -113,18 +113,17 @@ const MovieForm = ({
               )}
             </div>
             <div className="field">
-              <label className="label">View count</label>
+              <label className="label">Views count</label>
               <div className="control">
                 <input
-                  className={`input ${errors.view_count ? 'is-danger' : ''}`}
-                  placeholder="View count"
-                  name="view_count"
+                  className={`input ${errors.views_count ? 'is-danger' : ''}`}
+                  placeholder="Views count"
+                  name="views_count"
                   onChange={handleChange}
-                  value={formData.view_count}
+                  value={formData.views_count}
                 />
               </div>
-              {errors.view_count && (
-                <p className="help is-danger">{errors.view_count}</p>
+              {errors.views_count && (<p className="help is-danger">{errors.views_count}</p>
               )}
               <div className="field">
                 <label className="label">Worth a watch</label>
@@ -137,8 +136,7 @@ const MovieForm = ({
                     value={formData.worth_a_watch}
                   />
                 </div>
-                {errors.worth_a_watch && (
-                  <p className="help is-danger">{errors.owner}</p>
+                {errors.worth_a_watch && (<p className="help is-danger">{errors.worth_a_watch}</p>
                 )}
                 <div className="field">
                   <label className="label">Owner</label>
@@ -151,12 +149,11 @@ const MovieForm = ({
                       value={formData.owner}
                     />
                   </div>
-                  {errors.video && (
-                    <p className="help is-danger">{errors.owner}</p>
+                  {errors.owner && (<p className="help is-danger">{errors.owner}</p>
                   )}
                   {/* <div>
-                  <button onChange={handleUpload} name="title" value={formData.owner}></button>
-                </div> */}
+                    <button onChange={handleUpload} name="title" value={formData.owner}></button>
+                  </div> */}
                   <div className="field">
                     <button type="submit" className="button is-warning is-fullwidth">
                       {buttonText}

@@ -35,7 +35,7 @@ const Navbar = () => {
       <div className="container">
         <div className="navbar-brand">
           <div className={`navbar-menu ${isActive ? 'is-active' : ''}`}>
-            <span><Link to="navbar-menu" onClick={handleMenuToggle}>📀</Link>
+            <span><Link to="/movies/" onClick={handleMenuToggle}>📀</Link>
             </span>
           </div>
           <div className="navbar-start">
@@ -44,7 +44,7 @@ const Navbar = () => {
             </div>
             <div>
               <Link to="/movies" className="navbar-item"></Link>
-              {userIsAuthenticated() && <Link to="/movies/new" className="navbar-item"> Browse Movies</Link>}
+              {userIsAuthenticated() && <Link to="/movies/AddMovies" className="navbar-item">Add a Movie</Link>}
             </div>
           </div>
 

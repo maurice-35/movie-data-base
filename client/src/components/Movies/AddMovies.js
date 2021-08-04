@@ -9,7 +9,6 @@ import MovieForm from './MovieForm'
 
 
 const AddMovies = () => {
-
   const history = useHistory()
   const [formData, setFormData] = useState({
     title: '',
@@ -43,18 +42,20 @@ const AddMovies = () => {
     setFormData(newFormData)
     setErrors(newErrors)
   }
-  console.log('changing')
+  console.log('Formdata', formData )
 
   const handleSubmit = async (event) => {
     event.preventDefault()
     try {
-      await axios.post('/api/movies/', formData,
+      await axios.post(
+        '/api/movies/', 
+        formData,
         {
           headers: { Authorization: `Bearer ${getTokenFromLocalStorage()}` },
-        })
+        }
+      )
       console.log(formData)
-
-      history.push('/movies')
+      history.push('/movies/')
     } catch (err) {
       setErrors(err.response.data.errors)
       console.log(err)
@@ -70,7 +71,7 @@ const AddMovies = () => {
           handleSubmit={handleSubmit}
           formData={formData}
           errors={errors}
-          buttonText="AddMovies"
+          buttonText="Add a Movie"
         />
       </div>
     </section>

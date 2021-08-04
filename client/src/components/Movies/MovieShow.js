@@ -1,14 +1,16 @@
 /* eslint-disable no-undef */
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import { useParams, Link } from 'react-router-dom'
-// import { getTokenFromLocalStorage, getPayload } from '../../helpers/auth'
+import { useParams, Link, useHistory } from 'react-router-dom'
+import { getPayload } from '../../helpers/auth'
 
 
 const MovieShow = () => {
-  const [movie, setMovie] = useState([])
+  const [movie, setMovie] = useState(null)
   const [hasError, setHasError] = useState(true)
   const { id } = useParams()
+  const history = useHistory()
+  console.log('ID')
 
   useEffect(() => {
     console.log('USE')
@@ -24,20 +26,34 @@ const MovieShow = () => {
       }
     }
     getData()
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
   console.log('working')
   console.log('params', id)
 
   // console.log('Movie', movie.owner.username)
 
-  const userIsOwner = (userId) => {
+  const userIsOwner = (ownerId) => {
     const payload = getPayload()
-    if (!payload) return false
-    return userId === payload.sub
+    if (!payload) return
+    return ownerId === payload.sub
   }
   console.log(userIsOwner)
   // console.log(payload)
+  if (movie === null) return null
+
+  const handleDelete = async () => {
+    try {
+      await axios.delete(`/api/movies/${id}`, {
+        headers: { 
+          Authorization: `Bearer ${getTokenFromLocalStorage()}`, 
+        },
+      })
+      history.push('/movies/')
+    } catch (err) {
+      console.log(err)
+    }
+  }
   return (
     <section id="body-content" className="section">
       <div className="container">
@@ -50,8 +66,11 @@ const MovieShow = () => {
               <p>{movie.description}</p>
               <hr />
               <div className="column is-half">
+
                 <figure className="image">
-                  <img src={movie.image} alt={movie.name} />
+                  <div className="image">
+                    <img src={movie.image} alt={movie.title} />
+                  </div>
                 </figure>
               </div>
               <div className="columns">
@@ -86,14 +105,14 @@ const MovieShow = () => {
                   <h4 className="title is-4"><span role="img" aria-label="point">☝🏻☝</span> Added By</h4>
                   <hr />
                 </div>
-                <p>{movie.owner.username}</p>
+                <p>{movie.owner.id}</p>
                 <hr />
-                {/* {userIsOwner(movie.owner.id) && */}
-                <div className="buttons">
-                  <button className="button is-danger">Delete Movie</button>
-                  <Link to={`/movies/${id}/edit`} className="button is-warning">Edit Movie</Link>
-                </div>
-                
+                {userIsOwner(movie.owner.id) &&
+                  <div className="buttons">
+                    <button onClick={handleDelete} className="button is-danger">Delete Movie</button>
+                    <Link to={`/movies/${id}/edit`} className="button is-warning">Edit Movie</Link>
+                  </div>
+                }
               </div>
             </div>
           </div>
