@@ -3,24 +3,6 @@
   "model": "movies.movie",
   "pk": 1,
   "fields": {
-    "title": "National Security",
-    "description": "Earl and Hank have only one thing in common: they're both L.A.P.D. rejects. One just got kicked out of the force--the other can't ...",
-    "image": "https://res.cloudinary.com/doe5zwesw/image/upload/v1627385989/Project%204/go1_muzbxw.webp",
-    "video": "https://www.youtube.com/embed/87YgGNNQyQA",
-    "audio_language": "English",
-    "run_time_mins": 2,
-    "year": 2003,
-    "views_count": 78375,
-    "worth_a_watch": true,
-    "owner": 1
-
-    
-  }
-},
-{
-  "model": "movies.movie",
-  "pk": 2,
-  "fields": {
     "title": "Behind Closed Doors",
     "description": "Stacy is a freshman at a Historic Black College & University. She Meets and falls in love with a Grad Student named Benjamin. He's nice and charming at first. Until he starts to control her and physically, psychologically, and verbally abuse her. Can Stacy get out of this domestic violence relationship before it's too late?",
     "image": "https://res.cloudinary.com/doe5zwesw/image/upload/v1627396100/Project%204/vi3_qpulag.jpg",
@@ -35,23 +17,7 @@
 },
 {
   "model": "movies.movie",
-  "pk": 3,
-  "fields": {
-    "title": "Just Our Luck",
-    "description": "Ema shares with her two best friends the find in her fortune cookie - three fortunes in one and they all read the same - 'your path to finding eternal love begins now'. She reflects on being in love and believes it's just around the corner. Days go by and she becomes disenchanted as her luck in love isn't panning out. Then one day a certain someone mysteriously appears. This shatters her beliefs and Ema comes to understand that a perfect fit for one may not be the same for another.",
-    "image": "https://res.cloudinary.com/doe5zwesw/image/upload/v1627397465/Project%204/vi3_t4cyb9.jpg",
-    "video": "https://www.youtube.com/embed/zr92kSIVHAE",
-    "audio_language": "English",
-    "run_time_mins": 78,
-    "year": 2016,
-    "views_count": 53665,
-    "worth_a_watch": true,
-    "owner": 1
-  }
-},
-{
-  "model": "movies.movie",
-  "pk": 4,
+  "pk": 2,
   "fields": {
     "title": "Wannabe Rocker",
     "description": "In a world of pop-stars Phaedra is struggling to make it as a rocker. Plagued with bad luck and disown by her parents she has all but given up on her dream. Phaedra's friends, however, are determined to show the industry what it is missing. Their outlandish plan to attract record producers by throwing a pretend party for Cher just might work. Who said there's anything wrong with a little creative lying; it might be your only to the top?.",
@@ -67,7 +33,7 @@
 },
 {
   "model": "movies.movie",
-  "pk": 5,
+  "pk": 3,
   "fields": {
     "title": "PURGATORY",
     "description": "Grieving widower, Bernard, is approached by a spiritual healer and a voodoo high priest with an enticing offer to reconnect with his late wife, Sophia, in the afterlife. In the process, Bernard faces spirits, demons, and life-altering secrets.",
@@ -83,7 +49,7 @@
 },
 {
   "model": "movies.movie",
-  "pk": 6,
+  "pk": 4,
   "fields": {
     "title": "Hollywood Road Trip",
     "description": "Chaz, a vintage magazine collector, decides to go on a road trip with his friends to Hollywood after discovering his landlord's plot to find and hurt its long time founder and CEO. With everything at stake, he is forced to choose between his magazine collection, his best friends, his dream girl or saving an innocent man's life.",
@@ -99,18 +65,242 @@
 },
 {
   "model": "movies.movie",
-  "pk": 7,
+  "pk": 5,
   "fields": {
-    "title": "King of special forces",
-    "description": "Powerful Action movie.",
-    "image": "https://res.cloudinary.com/doe5zwesw/image/upload/v1627486593/Project%204/vi7_udt6l7.webp",
-    "video": "https://www.youtube.com/embed/uzHrR5slXdc",
+    "title": "2 Million Stupid Women",
+    "description": "Melissa is determined to make this Birthday one to remember, and it will be, just not for the reasons she was hoping. Faced with the realization that her new boyfriend is just not that into her and would rather hang out with another girl, Melissa sets out to rid herself of her bad hook-up karma once and for all.",
+    "image": "https://res.cloudinary.com/doe5zwesw/image/upload/v1627503802/Project%204/vi9_ksxlik.jpg",
+    "video": "https://www.youtube.com/embed/Kc1rKytwmUo",
     "audio_language": "English",
-    "run_time_mins": 99,
-    "year": 2021,
-    "views_count": 4932486,
+    "run_time_mins": 102,
+    "year": 2010,
+    "views_count": 9237,
     "worth_a_watch": true,
     "owner": 1
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 6,
+  "fields": {
+    "title": "Darkening Sky",
+    "description": "When an alien abduction nightmare is revealed to have been much more than a dream, a student finds himself confronted with the reality that not only do extraterrestrials actually exist, but they are taking possession of humans, harvesting the organs, and implanting them with mysterious devices. Now, the deeper he delves into the unknown, the faster a suspicion grows that he is somehow the center of the aliens' plan.",
+    "image": "https://res.cloudinary.com/doe5zwesw/image/upload/v1627504147/Project%204/v18_fsxdbs.jpg",
+    "video": "https://www.youtube.com/embed/Pal8jdJJ_jg",
+    "audio_language": "English",
+    "run_time_mins": 84,
+    "year": 2011,
+    "views_count": 26966,
+    "worth_a_watch": true,
+    "owner": 2
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 7,
+  "fields": {
+    "title": "Music & Murder 2",
+    "description": "After Chastity is found, the women of Venom studios must put life back together and keep the studios running. While they attempt to keep the business running smoothly, the women discover a new threat in the form of a potential friend. Now they have to find out what really happened to Famous and find a way to keep Venom studios afloat.",
+    "image": "https://res.cloudinary.com/doe5zwesw/image/upload/v1627532433/Project%204/v23_dar8rd.jpg",
+    "video": "https://www.youtube.com/embed/xfhff38e0CI",
+    "audio_language": "English",
+    "run_time_mins": 108,
+    "year": 2021,
+    "views_count": 5414,
+    "worth_a_watch": true,
+    "owner": 2
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 8,
+  "fields": {
+    "title": "National Security",
+    "description": "Earl and Hank have only one thing in common: they're both L.A.P.D. rejects. One just got kicked out of the force--the other can't ...",
+    "image": "https://res.cloudinary.com/doe5zwesw/image/upload/v1627385989/Project%204/go1_muzbxw.webp",
+    "video": "https://www.youtube.com/embed/87YgGNNQyQA",
+    "audio_language": "English",
+    "run_time_mins": 2,
+    "year": 2003,
+    "views_count": 78375,
+    "worth_a_watch": true,
+    "owner": 2
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 9,
+  "fields": {
+    "title": "The Wedding Video",
+    "description": "Kristin and Chris are an unconventional couple -- so of course they wanted an unconventional wedding video. Little did they realize what they were in for when they hired Virgil Crumb. Virgil's vision for his film involved digging up dirt on the couple. But when cracks in the relationship began to show, Chris and Kristin frantically call the wedding off. Now, Virgil is furious. How could these actors ruin 'his' film? Chris and Kristin will soon realize they are meant to be together or else!",
+    "image": "https://res.cloudinary.com/doe5zwesw/image/upload/v1627505004/Project%204/v10_j172fg.jpg",
+    "video": "https://www.youtube.com/embed/KkS9DjbDVaY",
+    "audio_language": "English",
+    "run_time_mins": 85,
+    "year": 2020,
+    "views_count": 5307,
+    "worth_a_watch": true,
+    "owner": 2
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 10,
+  "fields": {
+    "title": "Misbehavior",
+    "description": "In an effort to break away from her mundane life, Stephanie sets her sights on seducing her handsome teacher, and finds that he has some stimulating secrets. Submission was the name of the game and Mr. Carling demands total control. But, soon their secret rendezvous go from lustful to a more dangerous place. Stephanie must choose if she is ready for the consequences of her misbehavior.",
+    "image": "https://res.cloudinary.com/doe5zwesw/image/upload/v1627506047/Project%204/v11_j07wl1.jpg",
+    "video": "https://www.youtube.com/embed/UOHK_aXVjwQ",
+    "audio_language": "English",
+    "run_time_mins": 94,
+    "year": 2020,
+    "views_count": 936063,
+    "worth_a_watch": true,
+    "owner": 3
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 11,
+  "fields": {
+    "title": "Shattered",
+    "description": "When four lifelong friends decided to open the hottest new bar in town, they never thought the night of their lives would turn into their worst nightmare. But when one of their own is brutally attacked and manages to trap her assailant inside the bar, their friendship is tested like never before. Lives will be torn apart and bonds will be broken as they decide whether to trust justice to take its course... or take justice into their own hands.",
+    "image": "https://res.cloudinary.com/doe5zwesw/image/upload/v1627506442/Project%204/v12_yz9s7z.jpg",
+    "video": "https://www.youtube.com/embed/p5rmEfgD3Jo",
+    "audio_language": "English",
+    "run_time_mins": 91,
+    "year": 2010,
+    "views_count": 30217,
+    "worth_a_watch": true,
+    "owner": 3
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 12,
+  "fields": {
+    "title": "London Betty",
+    "description": "Betty has moved across the pond to become a real life American reporter, but when her first story assignment turns out to be just another fluff piece she begins to think twice about the move. Discouraged and looking for allies Betty forms an unlikely bond with the neighborhood thieves and together they set out to investigate the town's crooked Mayor. Betty might just get her first real news story, but she'll have to be in cahoots with thieves to get it.",
+    "image": "https://res.cloudinary.com/doe5zwesw/image/upload/v1627506807/Project%204/v13_zkk9s3.jpg",
+    "video": "https://www.youtube.com/embed/M1VjOeRRuf8",
+    "audio_language": "English",
+    "run_time_mins": 80,
+    "year": 2018,
+    "views_count": 58,
+    "worth_a_watch": true,
+    "owner": 1
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 13,
+  "fields": {
+    "title": "Just Our Luck",
+    "description": "Ema shares with her two best friends the find in her fortune cookie - three fortunes in one and they all read the same - 'your path to finding eternal love begins now'. She reflects on being in love and believes it's just around the corner. Days go by and she becomes disenchanted as her luck in love isn't panning out. Then one day a certain someone mysteriously appears. This shatters her beliefs and Ema comes to understand that a perfect fit for one may not be the same for another.",
+    "image": "https://res.cloudinary.com/doe5zwesw/image/upload/v1627397465/Project%204/vi3_t4cyb9.jpg",
+    "video": "https://www.youtube.com/embed/zr92kSIVHAE",
+    "audio_language": "English",
+    "run_time_mins": 78,
+    "year": 2016,
+    "views_count": 53665,
+    "worth_a_watch": true,
+    "owner": 1
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 14,
+  "fields": {
+    "title": "Jack Squad",
+    "description": "Looking for some quick cash three women band together and decide to drug and jack every rich man they can find. Their plan quickly turns profitable, but the girls soon learn that even the best cons eventually unravel. Will they be able to find a way out before it is too late?",
+    "image": "https://res.cloudinary.com/doe5zwesw/image/upload/v1627507847/Project%204/v15_ondyr3.jpg",
+    "video": "https://www.youtube.com/embed/MVyHuDtEX7o",
+    "audio_language": "English",
+    "run_time_mins": 120,
+    "year": 2009,
+    "views_count": 21740,
+    "worth_a_watch": true,
+    "owner": 2
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 15,
+  "fields": {
+    "title": "The Beatles And Us",
+    "description": "A quirky and affectionate portrait of Liverpool and the Beatles, exploring their evolving relationship and mutual impact",
+    "image": "https://res.cloudinary.com/doe5zwesw/image/upload/v1627509231/Project%204/v19_yia4i9.jpg",
+    "video": "https://www.youtube.com/embed/BwCSqYK7aA8",
+    "audio_language": "English",
+    "run_time_mins": 25,
+    "year": 2021,
+    "views_count": 39,
+    "worth_a_watch": true,
+    "owner": 2
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 16,
+  "fields": {
+    "title": "Snow Black",
+    "description": "Sarah Camden, a special operations soldier with PTSD, returns home to bury her mother. She realizes that she has to rid her hometown of gangs, drugs and crooked politicians. Sarah calls in her special ops buddies to clean up the town.",
+    "image": "https://res.cloudinary.com/doe5zwesw/image/upload/v1627509860/Project%204/v21_wvwtul.jpg",
+    "video": "https://www.youtube.com/embed/e58f7DrAM2k",
+    "audio_language": "English",
+    "run_time_mins": 84,
+    "year": 2020,
+    "views_count": 54364,
+    "worth_a_watch": true,
+    "owner": 3
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 17,
+  "fields": {
+    "title": "Black and White",
+    "description": "A special operations soldier with PTSD",
+    "image": "https://res.cloudinary.com/doe5zwesw/image/upload/v1627366011/Project%204/57_buqwce.jpg",
+    "video": "https://www.youtube.com/embed/xOrXpK-rUaI",
+    "audio_language": "English",
+    "run_time_mins": 84,
+    "year": 2020,
+    "views_count": 54364,
+    "worth_a_watch": true,
+    "owner": 3
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 18,
+  "fields": {
+    "title": "The House Guest",
+    "description": "A young married couple moves in a female childhood friend who the wife hasn't seen in years. Slowly the house guest starts seducing the ones around her and people start dying. Can anyone stop her before it's too late?",
+    "image": "https://res.cloudinary.com/doe5zwesw/image/upload/v1628055662/Project%204/v26_jn7rkw.jpg",
+    "video": "https://www.youtube.com/embed/N58Zqc2SYRU",
+    "audio_language": "English",
+    "run_time_mins": 82,
+    "year": 2021,
+    "views_count": 15186,
+    "worth_a_watch": true,
+    "owner": 4
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 19,
+  "fields": {
+    "title": "THE GUEST HOUSE",
+    "description": "This movie is cool.",
+    "image": "https://res.cloudinary.com/doe5zwesw/image/upload/v1628093500/Project%204/v28_ot8rpm.webp",
+    "video": "https://www.youtube.com/embed/o2JPF4RtHoY",
+    "audio_language": "English",
+    "run_time_mins": 80,
+    "year": 2018,
+    "views_count": 36342,
+    "worth_a_watch": true,
+    "owner": 4
   }
 }
 ]
