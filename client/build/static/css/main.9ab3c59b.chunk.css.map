@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/styles/main.scss"],"names":[],"mappings":"AAGA,0BACE,kBAAA","file":"main.9ab3c59b.chunk.css","sourcesContent":["@import './login.scss';\n\n\nsection.container-wrapper {\n  flex-direction:row;\n}\n\n\n\n"]}
