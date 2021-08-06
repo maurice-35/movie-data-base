@@ -3,40 +3,40 @@
   "model": "comments.comment",
   "pk": 1,
   "fields": {
-    "text": "This is crazy!",
-    "created_at": "2021-08-05T17:01:04.785Z",
-    "movies": 2,
-    "owner": 1
+    "text": "Pretty cool movie!",
+    "created_at": "2021-08-06T07:56:12.779Z",
+    "movies": 1,
+    "owner": 2
   }
 },
 {
   "model": "comments.comment",
   "pk": 2,
   "fields": {
-    "text": "You wanna watch this!",
-    "created_at": "2021-08-05T17:07:41.458Z",
-    "movies": 1,
-    "owner": 1
+    "text": "Amazing!",
+    "created_at": "2021-08-06T08:01:32.426Z",
+    "movies": 5,
+    "owner": 3
   }
 },
 {
   "model": "comments.comment",
   "pk": 3,
   "fields": {
-    "text": "Pretty cool movie!",
-    "created_at": "2021-08-05T17:10:03.208Z",
+    "text": "What a movie!",
+    "created_at": "2021-08-06T08:02:29.249Z",
     "movies": 6,
-    "owner": 2
+    "owner": 3
   }
 },
 {
   "model": "comments.comment",
   "pk": 4,
   "fields": {
-    "text": "What a movie!",
-    "created_at": "2021-08-05T17:17:20.060Z",
-    "movies": 10,
-    "owner": 3
+    "text": "Interesting!",
+    "created_at": "2021-08-06T08:06:16.364Z",
+    "movies": 8,
+    "owner": 4
   }
 },
 {
@@ -44,8 +44,8 @@
   "pk": 5,
   "fields": {
     "text": "What a scary movie!",
-    "created_at": "2021-08-05T17:25:29.502Z",
-    "movies": 18,
+    "created_at": "2021-08-06T08:10:59.618Z",
+    "movies": 11,
     "owner": 4
   }
 },
@@ -53,10 +53,40 @@
   "model": "comments.comment",
   "pk": 6,
   "fields": {
-    "text": "Worth taking note!",
-    "created_at": "2021-08-05T17:27:17.996Z",
-    "movies": 19,
+    "text": "You wanna watch this!",
+    "created_at": "2021-08-06T08:13:06.945Z",
+    "movies": 12,
     "owner": 4
+  }
+},
+{
+  "model": "comments.comment",
+  "pk": 7,
+  "fields": {
+    "text": "This is crazy!",
+    "created_at": "2021-08-06T08:16:54.892Z",
+    "movies": 13,
+    "owner": 5
+  }
+},
+{
+  "model": "comments.comment",
+  "pk": 8,
+  "fields": {
+    "text": "No comment, watch it yourself!",
+    "created_at": "2021-08-06T08:19:22.694Z",
+    "movies": 16,
+    "owner": 5
+  }
+},
+{
+  "model": "comments.comment",
+  "pk": 9,
+  "fields": {
+    "text": "This is lovely and amazing!",
+    "created_at": "2021-08-06T08:21:17.734Z",
+    "movies": 18,
+    "owner": 5
   }
 }
 ]
