@@ -17,7 +17,7 @@ const About = () => {
           <p>I enjoy cycling, exercising and walking in nature.</p>
         </div>
         <div className="github">
-          <p className="font-monospace">Maurice <i className="fas fa-hand-point-right"></i><Card.Link className="font-monospace" href="https://github.com/arjunDoel96"><i className="fab fa-github-square icon"></i></Card.Link></p>
+          <p className="font-monospace">Maurice <i className="fas fa-hand-point-right"></i><Card.Link className="font-monospace" href="https://github.com/maurice-35"><i className="fab fa-github-square icon"></i></Card.Link></p>
         </div>
       </section>
 
