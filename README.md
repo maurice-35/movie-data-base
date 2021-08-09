@@ -1,23 +1,23 @@
 # movie-data-base
 
-Background
-Technology Used
-Installing
-How To Use Movie-data-base
-Project Development
-User Model
-Authentication
-Other Models
-Implementing Relationships
-Seeding
-Front End
-Registering a User
-Final Thoughts & Project Wrap
-Wins
-Challenges / Bugs
-Key Learnings
-Project's Future
-License
+# Background
+# Technology Used
+# Installing
+# How To Use Movie-data-base
+# Project Development
+# User Model
+# Authentication
+# Other Models
+# Implementing Relationships
+# Seeding
+# Front End
+# Registering a User
+# Final Thoughts & Project Wrap
+# Wins
+# Challenges / Bugs
+# Key Learnings
+# Project's Future
+# License
 
 # Background
 This app was created to enable users to stream view movies without the need to download, rent or buy.
