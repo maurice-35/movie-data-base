@@ -1,5 +1,5 @@
 # movie-data-base
- [<b>Click</b>] 👉🏽  [<b> 📀 </b>](https://movie-app-project4.herokuapp.com/)
+ <b>Click</b> 👉🏽  [<b> 📀 </b>](https://movie-app-project4.herokuapp.com/)
 
 
  # Table of Contents
