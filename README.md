@@ -3,7 +3,7 @@
 - [Background](#background)
 - [Technology-Used](#technology-used)
 - [Installing](#installing)
-# How To Use Movie-data-base
+- [How-To-Use-Movie-app-project4]
 # Project Development
 # User Model
 # Authentication
