@@ -5,7 +5,7 @@
  # Table of Contents
 
 - [Background](#background)
-- [Technology-Used](#technology-used)
+- [Technology Used](#technology-used)
 - [Installing](#installing)
 - [How-To-Use Movie-app-project4](#how-to-use-movie-app-project4)
 - [Project-Development](#project-development)
