@@ -18,9 +18,9 @@
   - [Registering a User](#registering-a-user)
 - [Final Thoughts & Project Wrap](#final-thoughts-and-project-wrap)  
   - [Wins](#wins)
-  - [Challenges / Bugs](#challenges-/-bugs)
+  - [Challenges / Bugs](#challenges-or-bugs)
   - [Key Learnings](#key-learnings)
-  - [Project's Future](#project-'-s-future)
+  - [Project's Future](#project'-s-future)
 - [License & copyright](#license-and-copyright)
 
 
