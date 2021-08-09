@@ -1,5 +1,5 @@
 # movie-data-base
- Click 👉🏽  - [📀](#📀)
+ - Click 👉🏽 [📀](#📀)
 
  # Table of Contents
 
