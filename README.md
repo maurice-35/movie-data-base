@@ -274,18 +274,18 @@ Below are photos with my folder structure
 Followed similar steps as above for Registration until the point where I submitted the new user form, from where I took a different path for Login.
 In my helpers folder from components, I created a new file, auth.js to handle tokens:
  
-const setTokenToLocalStorage = (token) => {
-   window.localStorage.setItem('token', token)
- }
+         const setTokenToLocalStorage = (token) => {
+            window.localStorage.setItem('token', token)
+          }
  
-export const getTokenFromLocalStorage = () => {
- return window.localStorage.getItem('token')
-}
+         export const getTokenFromLocalStorage = () => {
+          return window.localStorage.getItem('token')
+         }
  
-const handleLogout = () => {
-   window.localStorage.removeItem('token')
-   history.push('/')
- }
+        const handleLogout = () => {
+           window.localStorage.removeItem('token')
+           history.push('/')
+         }
  
 I then used SetToken within my Login function to set the user token if login is successful.
  
