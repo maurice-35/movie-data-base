@@ -94,9 +94,9 @@ admin.site.register(User)
  
 And tested everything works fine by running the server with python manage.py runserver and visiting the admin app localhost:8000/admin. I should be able to log in with my super user, but had I not created this when I set up the project, I can easily do so now by typing the following command in Terminal: python manage.py createsuperuser and filling the options required.
 
-    
-    ![admin](https://user-images.githubusercontent.com/84001897/128669493-848037c3-dca3-462a-97c8-38c8134a25d7.png)
-    ![admin1](https://user-images.githubusercontent.com/84001897/128669912-71dad11c-cd92-49df-aec5-a756f3b9c2ea.png)
+![admin](https://user-images.githubusercontent.com/84001897/128673403-02a43823-aed2-4962-a389-52079e3585f8.png)
+ 
+![admin1](https://user-images.githubusercontent.com/84001897/128673430-017f217c-69a9-4745-b5af-4a7723d09788.png)
 
 # Authentication
 Because I needed users to be able to register via the API, I added the Python Json Web Token package: pipenv install pyjwt
