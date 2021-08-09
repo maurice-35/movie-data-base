@@ -20,7 +20,7 @@
   - [Wins](#wins)
   - [Challenges / Bugs](#challenges-/-bugs)
   - [Key Learnings](#key-learnings)
-  - [Project's Future](#project's-future)
+  - [Project's Future](#project-'-s-future)
 - [License & copyright](#license-and-copyright)
 
 
