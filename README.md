@@ -57,7 +57,7 @@ Install dependencies in the client folder: cd client && yarn
 Start the server (remaining in client folder): yarn start
  
  
-# How To Use Movie-data-base
+# How To Use Movie-app-project4
 Non-registered or logged in users can browse movies by accessing the movies page and selecting the picture corresponding to their movie choice.
 Registered and logged in users can access the movie page as well as add, edit and delete movies.
 However, users can only edit and delete the movies they added.
