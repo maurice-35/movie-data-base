@@ -67,6 +67,7 @@ I then created models of the various relationships (one-to-many) using Figma and
 
 ![mirror](https://user-images.githubusercontent.com/84001897/128668854-171abdb2-0603-48b9-98a9-ee50757ac6c8.png)
 
+
 # User model
 I created a folder called 'jwt_auth' and added 'jwt_auth' to my installed apps within the settings.py file in the project folder. I then linked it to the User model within the same folder: AUTH_USER_MODEL = 'jwt_auth.User'
  
@@ -94,10 +95,13 @@ admin.site.register(User)
  
 And tested everything works fine by running the server with python manage.py runserver and visiting the admin app localhost:8000/admin. I should be able to log in with my super user, but had I not created this when I set up the project, I can easily do so now by typing the following command in Terminal: python manage.py createsuperuser and filling the options required.
 
+ 
 ![admin](https://user-images.githubusercontent.com/84001897/128673403-02a43823-aed2-4962-a389-52079e3585f8.png)
+ 
  
 ![admin1](https://user-images.githubusercontent.com/84001897/128673430-017f217c-69a9-4745-b5af-4a7723d09788.png)
 
+ 
 # Authentication
 Because I needed users to be able to register via the API, I added the Python Json Web Token package: pipenv install pyjwt
  
