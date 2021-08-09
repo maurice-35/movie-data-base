@@ -16,7 +16,7 @@
 - [Seeding](#seeding)
 - [Front End](#front-end)
 - [Registering a User](#registering-a-user)
-- [Final Thoughts & Project Wrap](#final-thoughts-and-project-wrap)
+- [Final Thoughts and Project Wrap](#final-thoughts-&-project-wrap)
 - [Wins](#wins)
 - [Challenges / Bugs](#challenges-/-bugs)
 - [Key Learnings](#key-learnings)
