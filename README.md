@@ -18,10 +18,10 @@
   - [Registering a User](#registering-a-user)
 - [Final Thoughts & Project Wrap](#final-thoughts-and-project-wrap)  
   - [Wins](#wins)
-  - [Challenges / Bugs](#challenges-/-bugs)
+  - [Challenges / Bugs](#challenges-bugs)
   - [Key Learnings](#key-learnings)
   - [Project's Future](#projects-future)
-- [License & copyright](#license-and-copyright)
+- [License & copyright](#license-copyright)
 
 
 
