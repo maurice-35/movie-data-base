@@ -291,27 +291,28 @@ I then used SetToken within my Login function to set the user token if login is 
  
 I also wrote further functions in my auth.js to check the token and establish if the user is authenticated and the owner of a particular element based on their token:
 
-export const getPayload = () => {
- const token = getTokenFromLocalStorage()
- if (!token) return false
- const parts = token.split('.')
- console.log('parts', JSON.parse(atob(parts[1])))
- if (parts.length < 3) return false
- return JSON.parse(atob(parts[1]))
-}
+         export const getPayload = () => {
+          const token = getTokenFromLocalStorage()
+          if (!token) return false
+          const parts = token.split('.')
+          console.log('parts', JSON.parse(atob(parts[1])))
+          if (parts.length < 3) return false
+          return JSON.parse(atob(parts[1]))
+         }
  
 
-const userIsAuthenticated = () => {
-   const payload = getPayload()
-   if (!payload) return false
-   const now = Math.round(Date.now() / 1000)
-   return now < payload.exp
- }
+        const userIsAuthenticated = () => {
+           const payload = getPayload()
+           if (!payload) return false
+           const now = Math.round(Date.now() / 1000)
+           return now < payload.exp
+         }
  
- const userIsOwner = (ownerId) => {
-   const payload = getPayload()
-   if (!payload) return
-   return ownerId === payload.sub
+        const userIsOwner = (ownerId) => {
+          const payload = getPayload()
+          if (!payload) return
+          return ownerId === payload.sub
+        }
  
  
 These functions then helped me implement authentication and different outcomes based on the existence of a token.
