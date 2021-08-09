@@ -368,7 +368,7 @@ I had a great experience working with Django at the backend. I applied similar k
 It was yet another opportunity to understand the backend better.
 Given the timeframe, I was able to do what I did and appreciated by my peers for the effort I put in to achieve this.
  
-## Challenges / Bugs
+## Challenges/Bugs
 The main challenge of this project was getting the videos displayed on the browser. As they are trailing videos, I copied the video urls directly from the Youtube channel and uploaded them to Insomnia.
 When I tried to display these videos, I could only see video frames with no videos to display. I then realised there were three different urls for the same video so, I needed to choose the right one to get it displayed.
 I had a couple of serialisation issues. This was either because the data I put in did not correspond to fields in my models (and vise-versa) or some common type errors.
@@ -383,8 +383,11 @@ I now have a better understanding of models and relationships.
 This final output does not cover my intention and plan for the project. As a result, I intend to make some improvements on this project particularly on:
   
 adding a comment section for the movies, 
+  
 adding the movie genres,
-modifying the movie model,  
+  
+modifying the movie model, 
+  
 Adding some more styling on the project.
  
 # Contribution to this project
