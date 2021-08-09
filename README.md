@@ -265,9 +265,6 @@ MovieForm.js - The form used to create a new movie (I later refactored a part of
 MovieEdit.js - Importing the movie information into a form so the user can modify as required.
  
 Below are photos with my folder structure
-
-
-Below are photos with my folder structure
     
 ![front1](https://user-images.githubusercontent.com/84001897/128670042-f52e510e-876f-4b0d-a093-fc22c752e1b0.png)
 ![front2](https://user-images.githubusercontent.com/84001897/128670076-bbd5acf4-8ab7-43cf-b245-b714f5c8814c.png)
@@ -277,25 +274,23 @@ Below are photos with my folder structure
 Followed similar steps as above for Registration until the point where I submitted the new user form, from where I took a different path for Login.
 In my helpers folder from components, I created a new file, auth.js to handle tokens:
  
-<!-- * Set user token -->
 const setTokenToLocalStorage = (token) => {
    window.localStorage.setItem('token', token)
  }
  
-<!-- * Get user token -->
 export const getTokenFromLocalStorage = () => {
  return window.localStorage.getItem('token')
 }
  
-<!-- * Logout a user -->
 const handleLogout = () => {
    window.localStorage.removeItem('token')
    history.push('/')
  }
+ 
 I then used SetToken within my Login function to set the user token if login is successful.
  
 I also wrote further functions in my auth.js to check the token and establish if the user is authenticated and the owner of a particular element based on their token:
-<!-- * Get payload -->
+
 export const getPayload = () => {
  const token = getTokenFromLocalStorage()
  if (!token) return false
@@ -305,7 +300,7 @@ export const getPayload = () => {
  return JSON.parse(atob(parts[1]))
 }
  
-<!-- * Check if token is valid -->
+
 const userIsAuthenticated = () => {
    const payload = getPayload()
    if (!payload) return false
