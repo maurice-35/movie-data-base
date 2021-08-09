@@ -379,7 +379,7 @@ This was the greatest challenge I ever had.
  
 I now have a better understanding of models and relationships.
  
-## Project's Future
+# Project's Future
 This final output does not cover my intention and plan for the project. As a result, I intend to make some improvements on this project particularly on:
 adding a comment section for the movies
 adding the movie genres
@@ -389,7 +389,7 @@ Adding some more styling on the project.
 # Contribution to this project
 I would welcome any suggestions and contributions to improve on this project.
  
-###  License and copyright
+#  License & copyright
 This project was built for educational purposes only. All the information on the website is fictional (including names, contact details and film information).
 No copyright infringement is intended and all content is used under educational license.
  
