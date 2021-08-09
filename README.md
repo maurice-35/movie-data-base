@@ -389,7 +389,7 @@ Adding some more styling on the project.
 # Contribution to this project
 I would welcome any suggestions and contributions to improve on this project.
  
-#  License & copyright
+###  License & copyright
 This project was built for educational purposes only. All the information on the website is fictional (including names, contact details and film information).
 No copyright infringement is intended and all content is used under educational license.
  
