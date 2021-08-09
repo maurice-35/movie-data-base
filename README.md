@@ -16,11 +16,10 @@
   - [Seeding](#seeding)
   - [Front End](#front-end)
   - [Registering a User](#registering-a-user)
-- [Final Thoughts & Project Wrap](#final-thoughts-and-project-wrap)
-- [Wins](#wins)
-- [Challenges / Bugs](#challenges-/-bugs)
-- [Key Learnings](#key-learnings)
-- [Project's Future](#projects's-future)
+- [Final Thoughts & Project Wrap](#final-thoughts-and-project-wrap)   - [Wins](#wins)
+  - [Challenges / Bugs](#challenges-/-bugs)
+  - [Key Learnings](#key-learnings)
+  - [Project's Future](#projects's-future)
 - [License & copyright](#license-and-copyright)
 
 
