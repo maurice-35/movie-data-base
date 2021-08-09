@@ -21,7 +21,7 @@
   - [Challenges / Bugs](#challenges-or-bugs)
   - [Key Learnings](#key-learnings)
   - [Project's Future](#project'-s-future)
-- [License & copyright](#license-and-copyright)
+- [License & Copyright](#license-and-copyright)
 
 
 
@@ -389,7 +389,7 @@ Adding some more styling on the project.
 # Contribution to this project
 I would welcome any suggestions and contributions to improve on this project.
  
-###  License & copyright
+###  License & Copyright
 This project was built for educational purposes only. All the information on the website is fictional (including names, contact details and film information).
 No copyright infringement is intended and all content is used under educational license.
  
