@@ -8,20 +8,20 @@
 - [Technology-Used](#technology-used)
 - [Installing](#installing)
 - [How-To-Use Movie-app-project4](#how-to-use-movie-app-project4)
-# Project Development
-# User Model
-# Authentication
-# Other Models
-# Implementing Relationships
-# Seeding
-# Front End
-# Registering a User
-# Final Thoughts & Project Wrap
-# Wins
-# Challenges / Bugs
-# Key Learnings
-# Project's Future
-# License
+- [Project-Development](#project-development)
+- [User-Model](#user-model)
+- [Authentication](#authentication)
+- [Other-Models](#other-models)
+- [Implementing-Relationships](#implementing-relationships)
+- [Seeding](#seeding)
+- [Front-End](#front-end)
+- [Registering-a-User](#register-a-user)
+- [Final-Thoughts-&-Project-Wrap](#final-thoughts-&-project-wrap)
+- [Wins](#wins)
+- [Challenges / Bugs](#challenges-/-bugs)
+- [Key-Learnings](#key-learnings)
+- [Project's Future](#projects's-future)
+- [License](#license)
 
 
 
