@@ -1,8 +1,8 @@
 # movie-data-base
 
 - [Background](#background)
-# Technology Used
-# Installing
+- [Technology-Used](#technology-used)
+- [Installing](#installing)
 # How To Use Movie-data-base
 # Project Development
 # User Model
