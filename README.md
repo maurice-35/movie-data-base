@@ -383,8 +383,11 @@ I now have a better understanding of models and relationships.
 This final output does not cover my intention and plan for the project. As a result, I intend to make some improvements on this project particularly on:
   
 adding a comment section for the movies,
+  
 adding the movie genres,
+  
 modifying the movie model,
+  
 Adding some more styling on the project.
  
 # Contribution to this project
