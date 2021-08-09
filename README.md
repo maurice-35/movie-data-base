@@ -1,4 +1,7 @@
 # movie-data-base
+ Click 👉🏽  📀
+
+ # Table of Contents
 
 - [Background](#background)
 - [Technology-Used](#technology-used)
