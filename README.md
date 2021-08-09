@@ -15,7 +15,7 @@
 - [Implementing-Relationships](#implementing-relationships)
 - [Seeding](#seeding)
 - [Front-End](#front-end)
-- [Registering-a-User](#register-a-user)
+- [Registering a User](#register-a-user)
 - [Final-Thoughts-&-Project-Wrap](#final-thoughts-&-project-wrap)
 - [Wins](#wins)
 - [Challenges / Bugs](#challenges-/-bugs)
