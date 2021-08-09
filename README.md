@@ -21,7 +21,7 @@
 - [Challenges / Bugs](#challenges-/-bugs)
 - [Key Learnings](#key-learnings)
 - [Project's Future](#projects's-future)
-- [License](#license)
+- [License & copyright](#license-&-copyright)
 
 
 
