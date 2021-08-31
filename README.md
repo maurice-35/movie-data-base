@@ -157,11 +157,11 @@ I then added my custom authentication settings to the `project/settings.py`.
 It was also time to add a user serializer to be able to view my user model information, which I created in the serializers folder. In order to implement register and login functionality, I made the views.py that would handle my server requests and send back responses, and then set up my URL patterns for paths. The only thing left to do was write my login and issue the token:
 
  
-User = get_user_model()
- 
-class RegisterView(APIView): 
- 
-   def post(self, request):
+      User = get_user_model()
+
+      class RegisterView(APIView): 
+
+         def post(self, request):
    
    #### request data going into the UserSerializer to be converted
 
@@ -173,24 +173,28 @@ class RegisterView(APIView):
  
 class LoginView(APIView):   # post request to '/auth/login/'
  
-   def post(self, request):
-       email = request.data.get('email')
-       password = request.data.get('password')
- 
-       try:
-           user_to_login = User.objects.get(email=email)
-       except User.DoesNotExist:
-           raise PermissionDenied(detail='Invalid Credentials')
-       if not user_to_login.check_password(password):
-           raise PermissionDenied(detail='Invalid Credentials')
- 
-       dt = datetime.now() + timedelta(days=7)  # expiry_time
-       token = jwt.encode(
-           {'sub': user_to_login.id, 'exp': int(dt.strftime('%s'))},
-           settings.SECRET_KEY,
-           algorithm='HS256'
-       )
-       return Response({ 'token': token, 'message': f"Welcome back {user_to_login.username}" })
+   class LoginView(APIView):
+
+        def post(self, request):
+            email = request.data.get('email')
+            password = request.data.get('password')
+
+            try:
+                user_to_login = User.objects.get(email=email)
+            except User.DoesNotExist:
+                raise PermissionDenied(detail='Invalid Credentials')
+            if not user_to_login.check_password(password):
+                raise PermissionDenied(detail='Invalid Credentials')
+
+            dt = datetime.now() + timedelta(days=7)
+            token = jwt.encode(
+                {'sub': user_to_login.id, 'exp': int(dt.strftime('%s'))},
+                settings.SECRET_KEY,
+                algorithm='HS256'
+            )
+            return Response({ 'token': token, 'message': f"Welcome back {user_to_login.username}" })
+
+
  
 ## Other Models
 Once my User model was in place, I proceeded with creating my other 5 models one by one, following the same steps:
