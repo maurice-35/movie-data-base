@@ -9,7 +9,7 @@
 - [Technology Used](#technology-used)
 - [Installing](#installing)
 - [How-To-Use Movie-app-project4](#how-to-use-movie-app-project4)
-- [Project Development](#project-development)
+- [Approach](#approach)
 - [User Model](#user-model)
 - [Authentication](#authentication)
 - [Other Models](#other-models)
@@ -19,8 +19,8 @@
 - [Registering a User](#registering-a-user)  
 - [Wins](#wins)
 - [Challenges](#challenges)
+- [Future Features](#future-features)
 - [Key Learnings](#key-learnings)
-- [Project's Future](#projects-future)
 - [License & copyright](#license-and-copyright)
 
 
@@ -103,7 +103,8 @@ And tested everything works fine by running the server with `python manage.py ru
 ![admin1](https://user-images.githubusercontent.com/84001897/128673430-017f217c-69a9-4745-b5af-4a7723d09788.png)
 
  
-Authentication
+# Authentication
+
 Because I needed users to be able to register via the API, I added the Python Json Web Token package: `pipenv install pyjwt`.
 I first did my secure route to be able to check if incoming requests have a valid token, and restrict access otherwise. I created the file `authentication.py` within my `jwt_auth` folder:
 
