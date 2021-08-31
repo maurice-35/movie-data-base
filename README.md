@@ -118,42 +118,41 @@ I first did my secure route to be able to check if incoming requests have a vali
     User = get_user_model()
 
     class JWTAuthentication(BasicAuthentication):
- 
-       def authenticate(self, request):
-           header = request.headers.get('Authorization')  ## gets token from request and gives user the right to manipulate the data. ##
- 
-       if not header:
-           return None
- 
-       if not header.startswith('Bearer'):
-       # If token format is incorrect, throw error
-           raise PermissionDenied(detail="Invalid token") 
- 
-       token = header.replace('Bearer ', '')  # Removes and replaces 'Bearer' with an empty string
- 
-       try:     # information about user that lives in the token
-           payload =  jwt.decode(token, settings.SECRET_KEY, algorithms=['HS256'])
-           print('PAYLOAD', payload)
-           user = User.objects.get(pk=payload.get('sub'))
-       except jwt.exceptions.InvalidTokenError:
-           raise PermissionDenied(detail='Invalid token')
-       except User.DoesNotExist:
-           raise PermissionDenied(detail='user not found')
- 
-       return (user, token)   ## If user is found ##
- 
+
+        def authenticate(self, request):
+            header = request.headers.get('Authorization')  # get the token fron request
+
+            if not header:
+                return None
+
+            if not header.startswith('Bearer'):
+            # If token format is incorrect, throw error
+                raise PermissionDenied(detail="Invalid token")  
+
+            token = header.replace('Bearer ', '')  # Removes and replaces 'Bearer' with an empty string
+
+            try:     # information about user that lives in the token
+                payload =  jwt.decode(token, settings.SECRET_KEY, algorithms=['HS256'])
+                print('PAYLOAD', payload)
+                user = User.objects.get(pk=payload.get('sub')) 
+            except jwt.exceptions.InvalidTokenError:
+                raise PermissionDenied(detail='Invalid token')
+            except User.DoesNotExist:
+                raise PermissionDenied(detail='user not found')
+
+        return (user, token)   # If user is found
 I then added my custom authentication settings to the `project/settings.py`.
 
  
-    REST_FRAMEWORK = {
-       'DEFAULT_RENDERER_CLASSES': [
-           'rest_framework.renderers.JSONRenderer',
-           'rest_framework.renderers.BrowsableAPIRenderer',
-       ],
-       'DEFAULT_AUTHENTICATION_CLASSES': [
-           'jwt_auth.authentication.JWTAuthentication'
-       ],
-    }
+        REST_FRAMEWORK = {
+           'DEFAULT_RENDERER_CLASSES': [
+               'rest_framework.renderers.JSONRenderer',
+               'rest_framework.renderers.BrowsableAPIRenderer',
+           ],
+           'DEFAULT_AUTHENTICATION_CLASSES': [
+               'jwt_auth.authentication.JWTAuthentication'
+           ],
+        }
  
 It was also time to add a user serializer to be able to view my user model information, which I created in the serializers folder. In order to implement register and login functionality, I made the views.py that would handle my server requests and send back responses, and then set up my URL patterns for paths. The only thing left to do was write my login and issue the token:
 
