@@ -171,9 +171,8 @@ It was also time to add a user serializer to be able to view my user model infor
            return Response({ 'message': 'Registration Successful'}, status=status.HTTP_202_ACCEPTED)
        return Response(user_to_create.errors, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
  
-class LoginView(APIView):   # post request to '/auth/login/'
- 
-   class LoginView(APIView):
+       
+        class LoginView(APIView):   # post request to '/auth/login/'
 
         def post(self, request):
             email = request.data.get('email')
