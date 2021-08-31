@@ -72,31 +72,30 @@ I began by drafting a plan of the movie-data-base. I then created models of the 
 
 
 # User model
-I created a folder called 'jwt_auth' and added 'jwt_auth' to my installed apps within the settings.py file in the project folder. I then linked it to the User model within the same folder: AUTH_USER_MODEL = 'jwt_auth.User'
+I created a folder called `jwt_auth` and added 'jwt_auth' to my installed apps within the settings.py file in the project folder. I then linked it to the User model within the same folder: `AUTH_USER_MODEL = 'jwt_auth.User'`
  
-from django.db import models
-from django.contrib.auth.models import AbstractUser
+    from django.db import models
+    from django.contrib.auth.models import AbstractUser
+
+    class User(AbstractUser):   <<<Extending existing django User model>>>
+       email = models.CharField(max_length=50, unique=True)
+       first_name = models.CharField(max_length=50)
+       last_name = models.CharField(max_length=50)
+       profile_image = models.CharField(max_length=300)
  
-class User(AbstractUser):   <<<Extending existing django User model>>>
-   email = models.CharField(max_length=50, unique=True)
-   first_name = models.CharField(max_length=50)
-   last_name = models.CharField(max_length=50)
-   profile_image = models.CharField(max_length=300)
+The model now in place, I had Django check my new model and prepare to create the table for it in the database, using the make migrations command: `python manage.py makemigrations`.
  
-The model now in place, I had Django check my new model and prepare to create the table for it in the database, using the make migrations command: python manage.py makemigrations
- 
-And then migrated to run the changes: python manage.py migrate
- 
+And then migrated to run the changes: python manage.py migrate.
 I then had to register the new app with the admin.py site in its app folder:
+
+    from django.contrib import admin
+    from django.contrib.auth import get_user_model
+
+    User = get_user_model()   ## get my custom user model ##
+
+    admin.site.register(User)
  
-from django.contrib import admin
-from django.contrib.auth import get_user_model
- 
-User = get_user_model()   ## get my custom user model ##
- 
-admin.site.register(User)
- 
-And tested everything works fine by running the server with python manage.py runserver and visiting the admin app localhost:8000/admin. I should be able to log in with my super user, but had I not created this when I set up the project, I can easily do so now by typing the following command in Terminal: python manage.py createsuperuser and filling the options required.
+And tested everything works fine by running the server with `python manage.py runserver` and visiting the admin app `localhost:8000/admin`. I should be able to log in with my super user, but had I not created this when I set up the project, I can easily do so now by typing the following command in Terminal: python manage.py createsuperuser and filling the options required.
 
  
 ![admin](https://user-images.githubusercontent.com/84001897/128673403-02a43823-aed2-4962-a389-52079e3585f8.png)
@@ -105,23 +104,23 @@ And tested everything works fine by running the server with python manage.py run
 ![admin1](https://user-images.githubusercontent.com/84001897/128673430-017f217c-69a9-4745-b5af-4a7723d09788.png)
 
  
-# Authentication
-Because I needed users to be able to register via the API, I added the Python Json Web Token package: pipenv install pyjwt
+Authentication
+Because I needed users to be able to register via the API, I added the Python Json Web Token package: `pipenv install pyjwt`.
+I first did my secure route to be able to check if incoming requests have a valid token, and restrict access otherwise. I created the file `authentication.py` within my `jwt_auth` folder:
+
+
+    from rest_framework.authentication import BasicAuthentication
+    from rest_framework.exceptions import PermissionDenied
+    from django.contrib.auth import get_user_model
+    from django.conf import settings
+    import jwt
+
+    User = get_user_model()
+
+    class JWTAuthentication(BasicAuthentication):
  
-I first did my secure route to be able to check if incoming requests have a valid token, and restrict access otherwise. I created the file authentication.py within my jwt_auth folder:
- 
-from rest_framework.authentication import BasicAuthentication
-from rest_framework.exceptions import PermissionDenied
-from django.contrib.auth import get_user_model
-from django.conf import settings
-import jwt
- 
-User = get_user_model()
- 
-class JWTAuthentication(BasicAuthentication):
- 
-   def authenticate(self, request):
-       header = request.headers.get('Authorization')  ## gets token from request and gives user the right to manipulate the data. ##
+       def authenticate(self, request):
+           header = request.headers.get('Authorization')  ## gets token from request and gives user the right to manipulate the data. ##
  
        if not header:
            return None
@@ -143,26 +142,30 @@ class JWTAuthentication(BasicAuthentication):
  
        return (user, token)   ## If user is found ##
  
-I then added my custom authentication settings to the project/settings.py.
+I then added my custom authentication settings to the `project/settings.py`.
+
  
-REST_FRAMEWORK = {
-   'DEFAULT_RENDERER_CLASSES': [
-       'rest_framework.renderers.JSONRenderer',
-       'rest_framework.renderers.BrowsableAPIRenderer',
-   ],
-   'DEFAULT_AUTHENTICATION_CLASSES': [
-       'jwt_auth.authentication.JWTAuthentication'
-   ],
-}
+    REST_FRAMEWORK = {
+       'DEFAULT_RENDERER_CLASSES': [
+           'rest_framework.renderers.JSONRenderer',
+           'rest_framework.renderers.BrowsableAPIRenderer',
+       ],
+       'DEFAULT_AUTHENTICATION_CLASSES': [
+           'jwt_auth.authentication.JWTAuthentication'
+       ],
+    }
  
 It was also time to add a user serializer to be able to view my user model information, which I created in the serializers folder. In order to implement register and login functionality, I made the views.py that would handle my server requests and send back responses, and then set up my URL patterns for paths. The only thing left to do was write my login and issue the token:
+
  
 User = get_user_model()
  
 class RegisterView(APIView): 
  
    def post(self, request):
-   # request data going into the UserSerializer to be converted
+   
+   #### request data going into the UserSerializer to be converted
+
        user_to_create = UserSerializer(data=request.data)
        if user_to_create.is_valid():
            user_to_create.save()
@@ -190,17 +193,17 @@ class LoginView(APIView):   # post request to '/auth/login/'
        )
        return Response({ 'token': token, 'message': f"Welcome back {user_to_login.username}" })
  
-# Other Models
+Other Models
 Once my User model was in place, I proceeded with creating my other 5 models one by one, following the same steps:
- 
-Start a new app within the project for each new model
-Register the app in project/settings.py
-Create the model in models.py
-Establish any foreign key relationships
-Make migrations and then migrate
-Register the app within admin.py (adding a string method to the class to make items easier to read in the admin app)
-Test by running the server and visiting localhost:8000/admin to check the models
+Start a new app within the project for each new model. 
+Register the app in `project/settings.py`. 
+Create the model in `models.py`.
+Establish any foreign key relationships. 
+Make migrations and then migrate. 
+Register the app within admin.py (adding a string method to the class to make items easier to read in the admin app). 
+Test by running the server and visiting `localhost:8000/admin` to check the models.
 As an example, here is my movie model along with its implemented relationships, which I will discuss next:
+
  
 from django.db import models
 from django.db.models.fields import CharField
