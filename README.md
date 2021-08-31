@@ -193,15 +193,15 @@ class LoginView(APIView):   # post request to '/auth/login/'
        )
        return Response({ 'token': token, 'message': f"Welcome back {user_to_login.username}" })
  
-Other Models
+## Other Models
 Once my User model was in place, I proceeded with creating my other 5 models one by one, following the same steps:
-Start a new app within the project for each new model. 
-Register the app in `project/settings.py`. 
-Create the model in `models.py`.
-Establish any foreign key relationships. 
-Make migrations and then migrate. 
-Register the app within admin.py (adding a string method to the class to make items easier to read in the admin app). 
-Test by running the server and visiting `localhost:8000/admin` to check the models.
+- Start a new app within the project for each new model. 
+- Register the app in `project/settings.py`. 
+- Create the model in `models.py`.
+- Establish any foreign key relationships. 
+- Make migrations and then migrate. 
+- Register the app within admin.py (adding a string method to the class to make items easier to read in the admin app). 
+- Test by running the server and visiting `localhost:8000/admin` to check the models.
 As an example, here is my movie model along with its implemented relationships, which I will discuss next:
 
  
@@ -220,69 +220,69 @@ class Movie(models.Model):
    year = models.PositiveIntegerField(default=None)
    views_count = models.PositiveIntegerField(default=None)
    worth_a_watch = models.BooleanField(default=True, null=True)
-   # One_to_many relationship - a user can create many movies
-   owner = models.ForeignKey(
-       "jwt_auth.User",
-       related_name="movies",
-       on_delete = models.CASCADE
-   )
+   
+   
+ ### One_to_many relationship - a user can create many movies
+  
+      owner = models.ForeignKey(
+           "jwt_auth.User",
+           related_name="movies",
+           on_delete = models.CASCADE
+       )
  
-   def __str__(self):
-       return f"{self.title} - {self.year}"
+       def __str__(self):
+           return f"{self.title} - {self.year}"
+
+### Implementing relationships
  
-# Implementing relationships
- 
-For establishing the One to Many relationships, I created in "ONE" / serializers folder a populated.py file where I established the relationship to the "MANY". As an example, here is my populated.py file for films:
+For establishing the One to Many relationships, I created in "ONE" / serializers folder a `populated.py` file where I established the relationship to the "MANY". As an example, here is my `populated.py` file for films:
  
 class PopulatedMovieSerializer(MovieSerializer):
  
-   # Adding an object called serializers
+### Adding an object called serializers
+   
    comments = PopulatedCommentSerializer(many=True)
    owner = UserSerializer()  # shows the owner of this movie
  
  
-# Seeding
-I did the majority of seeding towards the end of the day. I followed the same process for all my models and uploaded some information via insomnia and others via the admin portal. With a good amount of data, I had  Django create a seeds file automatically from the data that already existed in the table: python manage.py dumpdata app-name --output app-name/seeds.json --indent=2 and then flushed the database and loaded the data from the seeds file back in. Below is an example of seeding data from TablePlus:
+### Seeding
+I did the majority of seeding towards the end of the day. I followed the same process for all my models and uploaded some information via Insomnia and others via the admin portal. With a good amount of data, I had Django create a seeds file automatically from the data that already existed in the table: `python manage.py dumpdata app-name --output app-name/seeds.json --indent=2` and then flushed the database and loaded the data from the seeds file back in. Below is an example of seeding data from TablePlus:
+
 
 
 ![admin2](https://user-images.githubusercontent.com/84001897/128669749-da5de6a4-6804-40d6-a673-a563f118c168.png)
 
 
-# Front End
+Front End
 After establishing my website structure by writing basic components for my main links, I added the routes in App.js and Nav.js, and imported Bulma to do a basic styling as I go. My plan was to return and continue styling once my main components are all in place and functioning correctly.
- 
 I went one by one and created components for the home, navbar, the footer, the schedule (to host the main part of my app) and the movies. I then proceeded with shaping each page and implementing the request functionality into my components as required.
+
+I then followed these steps:
  
-I then followed these steps
- 
-Creating a format scaffolding in each component using JSX and Bulma classes
-Writing the requests one at a time (getting data through async functions with try / catch blocks in place, and setting into State)
-Testing everything as I went along:
-First in Insomnia to make sure the request to my back end was working accurately and check the format the data is sent in
-Then in my console through logging the data at each step
-And last ensuring it shows on the page itself
-I then refactored my code to break it into smaller components that I imported in the main one (or reuse if required)
-I later added error handling (through using State) and updated the try / catch block to set the errors.
-For the components which required redirecting, I used History from react-router-dom to push a new url into the history array, and Location to refresh the page.
- 
+- Creating a format scaffolding in each component using JSX and Bulma classes. 
+- Writing the requests one at a time (getting data through async functions with try / catch blocks in place, and setting into State).
+- Testing everything as I went along: First in Insomnia to make sure the request to my back end was working accurately and check the format the data is sent in. Then in my console through logging the data at each step.
+- And lastly ensuring it shows on the page itself I then refactored my code to break it into smaller components that I imported in the main one (or reuse if required).
+
+I later added error handling (through using State) and updated the `try / catch block` to set the errors. For the components which required redirecting, I used `History` from `react-router-dom`` to push a new url into the history array, and Location` to refresh the page.
 As an example of how I structured the components, the movies folder was composed of:
- 
-MovieIndex.js - Showing all movies
-MovieCard.js - Used in the MovieIndex component, this is a subcomponent containing the format of a movie card
-MovieShow.js - Showing one particular movie (found through its id)
-AddMovie.js - The page a user is directed when wanting to create a movie
-MovieForm.js - The form used to create a new movie (I later refactored a part of this into a useForm component to make it reusable)
-MovieEdit.js - Importing the movie information into a form so the user can modify as required.
- 
-Below are photos with my folder structure
+- `MovieIndex.js` - Showing all movies.
+- `MovieCard.js` - Used in the MovieIndex component, this is a subcomponent containing the format of a movie card.
+- `MovieShow.js` - Showing one particular movie (found through its id).
+- `AddMovie.js` - The page a user is directed to when wanting to create a movie. 
+- `MovieForm.js` - The form used to create a new movie (I later refactored a part of this into a useForm component to make it reusable).
+- `MovieEdit.js` - Importing the movie information into a form so the user can modify as required.
+Below are photos with my folder structure.
+
     
 ![front1](https://user-images.githubusercontent.com/84001897/128670042-f52e510e-876f-4b0d-a093-fc22c752e1b0.png)
 ![front2](https://user-images.githubusercontent.com/84001897/128670076-bbd5acf4-8ab7-43cf-b245-b714f5c8814c.png)
 ![front3](https://user-images.githubusercontent.com/84001897/128670096-845051de-09cd-42af-8e88-904083fa16ec.png)
 
 # Registering a User
-Followed similar steps as above for Registration until the point where I submitted the new user form, from where I took a different path for Login.
-In my helpers folder from components, I created a new file, auth.js to handle tokens:
+
+Followed similar steps as above for Registration until the point where I submitted the new user form, from where I took a different path for Login. In my helpers folder from components, I created a new file, auth.js to handle tokens:
+
  
          const setTokenToLocalStorage = (token) => {
             window.localStorage.setItem('token', token)
@@ -298,8 +298,9 @@ In my helpers folder from components, I created a new file, auth.js to handle to
          }
  
 I then used SetToken within my Login function to set the user token if login is successful.
- 
+
 I also wrote further functions in my auth.js to check the token and establish if the user is authenticated and the owner of a particular element based on their token:
+
 
          export const getPayload = () => {
           const token = getTokenFromLocalStorage()
@@ -325,8 +326,8 @@ I also wrote further functions in my auth.js to check the token and establish if
         }
  
  
-These functions then helped me implement authentication and different outcomes based on the existence of a token.
-For example, my navbar displayed different options depending on login status:
+These functions then helped me implement authentication and different outcomes based on the existence of a token. For example, my navbar displayed different options depending on login status:
+
  
  
          <div className="navbar-end">
@@ -352,7 +353,7 @@ For example, my navbar displayed different options depending on login status:
          </div>
  
 I also restricted adding films to authenticated users only, and editing and deleting films to be allowed only to the user who created the film:
- 
+
 {userIsOwner(movie.owner.id) &&
    <div className="buttons">
      <button onClick={handleDelete} className="button is-danger">Delete Movie</button>
@@ -361,40 +362,37 @@ I also restricted adding films to authenticated users only, and editing and dele
 }
  
  
-# Final Thoughts and Project Wrap
- 
 # Wins
-I had a great experience working with Django at the backend. I applied similar knowledge from my project 3 and was able to come up with an MVP and models for the project.
-It was yet another opportunity to understand the backend better.
-Given the timeframe, I was able to do what I did and appreciated by my peers for the effort I put in to achieve this.
+I had a great experience working with Django at the backend. I applied similar knowledge from my project 3 and was able to come up with an MVP and models for the project. It was yet another opportunity to understand the backend better. Given the timeframe, I was able to do what I did and appreciated by my peers for the effort I put in to achieve this.
+
  
-## Challenges / Bugs
-The main challenge of this project was getting the videos displayed on the browser. As they are trailing videos, I copied the video urls directly from the Youtube channel and uploaded them to Insomnia.
-When I tried to display these videos, I could only see video frames with no videos to display. I then realised there were three different urls for the same video so, I needed to choose the right one to get it displayed.
-I had a couple of serialisation issues. This was either because the data I put in did not correspond to fields in my models (and vise-versa) or some common type errors.
-Another great challenge was when my laptop suddenly shutdown. I restarted it but everything stopped working and was throwing errors. I made some searches online to no avail. I then seeked some help from one of my instructors who resolved the issue with just a line of code.
-This was the greatest challenge I ever had.
- 
+# Challenges 
+- The main challenge of this project was getting the videos displayed on the browser. As they are trailing videos, I copied the video urls directly from the Youtube channel and uploaded them to Insomnia. When I tried to display these videos, I could only see video frames with no videos to display. I then realised there were three different urls for the same video so, I needed to choose the right one to get it displayed.
+- I had a couple of serialisation issues. This was either because the data I put in did not correspond to fields in my models (and vise-versa) or some common type errors. 
+- Another challenge I had was when my laptop suddenly shut down. I restarted it but everything stopped working and was throwing errors. I made some searches online to no avail. I then seeked some help from one of my instructors who resolved the issue with just a line of code. This was the greatest challenge I ever had.
+
+
+# Future Features
+
+This final output does not cover my intention and plan for the project. As a result, I intend to make some improvements on this project particularly on:
+
+- Adding a comment section for the movies.
+- Adding the movie genres.
+- Modifying the movie model.
+- Adding some more styling on the project.
+
 # Key Learnings
  
-I now have a better understanding of models and relationships.
- 
-# Project's Future
-This final output does not cover my intention and plan for the project. As a result, I intend to make some improvements on this project particularly on:
-  
-adding a comment section for the movies, 
-  
-adding the movie genres,
-  
-modifying the movie model, 
-  
-Adding some more styling on the project.
- 
+- The ability to set-up and manage multiple folders and files in a project.
+- I now have a better understanding of models and relationships.
+
 # Contribution to this project
 I would welcome any suggestions and contributions to improve on this project.
+
  
 #  License & copyright
-This project was built for educational purposes only. All the information on the website is fictional (including some names, contact details and movie information).
-No copyright infringement is intended and all content is used under educational license.
+ License & copyright
+This project was built for educational purposes only. All the information on the website is fictional (including some names, contact details and movie information). No copyright infringement is intended and all content is used under educational license.
+
  
-© Maurice Kollewe
+#### © Maurice Kollewe
