@@ -25,52 +25,48 @@
 - [License & copyright](#license-and-copyright)
 
 
+#  Overview
+This app was created to enable users to stream movies without the need to download, rent or buy. This is the fourth (and final) project in the General Assembly Immersive course. I worked solo and had 10 days to develop a full stack application. The back end is built with a Python Django API using Django REST Framework to serve data from a Postgres database, and a separate front end built with React.
 
-# Background
-This app was created to enable users to stream view movies without the need to download, rent or buy.
-This is the fourth (and final) project in the General Assembly Immersive course. I worked solo and had 10 days to develop a full stack application. The back end is built with a Python Django API using Django REST Framework to serve data from a Postgres database, and a separate front end built with React.
- 
-# Technology Used
-Python
-JavaScript
-SASS
- 
-# Frameworks
-Django
-React Hooks
-Bulma
- 
-# Dependencies & Components
-Axios - Promise based HTTP client for the browser and node.js
-React-Icons
-React-Router-Dom - DOM bindings for React Router
-React-Select - Select Input control for ReactJS
- 
- 
-# Installing
- 
-Install back-end dependencies: pipenv
-Enter the project shell: pipenv shell
-Make migrations: python manage.py makemigrations
-Migrate: python manage.py migrate
-Load seed data for Owners: python manage.py loaddata jwt_auth/seeds.json
-Load seed data for Comments: python manage.py loaddata comments/seeds.json
-Load seed data for Movies: python manage.py loaddata movies/seeds.json
-Load seed data for : python manage.py loaddata jwt_auth/seeds.json
-Start back end server: python manage.py runserver
-Install dependencies in the client folder: cd client && yarn
-Start the server (remaining in client folder): yarn start
- 
- 
-# How To Use Movie-app-project4
-Non-registered or logged in users can browse movies by accessing the movies page and selecting the picture corresponding to their movie choice.
-Registered and logged in users can access the movie page as well as add, edit and delete movies.
-However, users can only edit and delete the movies they added.
+#  Technologies
+- Python 
+- JavaScript 
+- SASS
+
+#  Frameworks
+- Django 
+- React Hooks
+- Bulma
+
+#  Dependencies & Components.
+- Axios - Promise based HTTP client for the browser and node.js. 
+- React-Icons. 
+- React-Router-Dom - DOM bindings for React Router 
+- React-Select - Select Input control for ReactJS.
 
 
-# Project Development
-I began by drafting a plan of the movie-data-base.
-I then created models of the various relationships (one-to-many) using Figma and Mirror
+#  Installing
+- Install back-end dependencies: `pipenv`. 
+- Enter the project shell: `pipenv shell`. 
+- Make migrations: `python manage.py makemigrations`. 
+- Migrate: `python manage.py migrate`. 
+- Load seed data for Owners: `python manage.py loaddata jwt_auth/seeds.json`. 
+- Load seed data for Comments: `python manage.py loaddata comments/seeds.json`. 
+- Load seed data for Movies: `python manage.py loaddata movies/seeds.json`. 
+- Start back end server: `python manage.py runserver`.
+- Install dependencies in the client folder: `cd client && yarn`. 
+- Start the server (remaining in the client folder): `yarn start`.
+
+ 
+ 
+ 
+#  How To Use Movie-app-project4
+Non-registered or logged in users can browse movies by accessing the movies page and selecting the picture corresponding to their movie choice. 
+Registered and logged in users can access the movie page as well as add, edit and delete movies. However, users can only edit and delete the movies they added.
+
+#  Approach
+I began by drafting a plan of the movie-data-base. I then created models of the various relationships (one-to-many) using [Figma.com](https://www.figma.com/) and [Miro.com](https://www.miro.com/).
+
 
 ![mirror](https://user-images.githubusercontent.com/84001897/128668854-171abdb2-0603-48b9-98a9-ee50757ac6c8.png)
 
