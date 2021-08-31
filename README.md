@@ -210,16 +210,16 @@ from django.db.models.fields import CharField
  
 # Movie model
  
-class Movie(models.Model):
-   title = models.CharField(max_length=100)
-   description = models.CharField(max_length=500, default=None)
-   image = models.CharField(max_length=300, default=None)
-   video = models.CharField(max_length=300, default=None)
-   audio_language = models.CharField(max_length=50, default=None)
-   run_time_mins = models.PositiveIntegerField(default=None)
-   year = models.PositiveIntegerField(default=None)
-   views_count = models.PositiveIntegerField(default=None)
-   worth_a_watch = models.BooleanField(default=True, null=True)
+    class Movie(models.Model):
+       title = models.CharField(max_length=100)
+       description = models.CharField(max_length=500, default=None)
+       image = models.CharField(max_length=300, default=None)
+       video = models.CharField(max_length=300, default=None)
+       audio_language = models.CharField(max_length=50, default=None)
+       run_time_mins = models.PositiveIntegerField(default=None)
+       year = models.PositiveIntegerField(default=None)
+       views_count = models.PositiveIntegerField(default=None)
+       worth_a_watch = models.BooleanField(default=True, null=True)
    
    
  ### One_to_many relationship - a user can create many movies
