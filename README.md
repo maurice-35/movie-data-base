@@ -25,7 +25,7 @@
 
 
 #  Overview
-This app was created to enable users to stream movies without the need to download, rent or buy. This is the fourth (and final) project in the General Assembly Immersive course. I worked solo and had 10 days to develop a full stack application. The back end is built with a Python Django API using Django REST Framework to serve data from a Postgres database, and a separate front end built with React.
+This app was created to enable users to stream movies without the need to download, rent or buy. My inspirations were drawn from the [Maverick Entertainment Movies](https://www.maverickentertainment.cc/) website. This is the fourth (and final) project in the General Assembly Immersive course. I worked solo and had 10 days to develop a full stack application. The back end is built with a Python Django API using Django REST Framework to serve data from a Postgres database, and a separate front end built with React.
 
 #  Technologies
 - [Python](https://www.python.org/) 
