@@ -28,20 +28,21 @@
 This app was created to enable users to stream movies without the need to download, rent or buy. This is the fourth (and final) project in the General Assembly Immersive course. I worked solo and had 10 days to develop a full stack application. The back end is built with a Python Django API using Django REST Framework to serve data from a Postgres database, and a separate front end built with React.
 
 #  Technologies
-- Python 
-- JavaScript 
-- SASS
+- [Python](https://www.python.org/) 
+- [JavaScript](https://www.javascript.com/)
+- [SASS](https://sass-lang.com/documentation/syntax)
 
 #  Frameworks
-- Django 
-- React Hooks
-- Bulma
+- [Django](https://www.django-rest-framework.org/) 
+- [React Hooks](https://reactrouter.com/web/api/Hooks)
+- [Bulma](https://bulma.io/)
 
 #  Dependencies & Components.
-- Axios - Promise based HTTP client for the browser and node.js. 
-- React-Icons. 
-- React-Router-Dom - DOM bindings for React Router 
-- React-Select - Select Input control for ReactJS.
+- [Axios](https://axios-http.com/) - Promise based HTTP client for the browser and node.js.  
+- [React-Router-Dom](https://reactrouter.com/web/example/modal-gallery) - DOM bindings for React Router 
+- [React-Select](https://react-slick.neostack.com/) - Select Input control for ReactJS.
+- [Cloudinary](https://cloudinary.com/documentation)
+- [JsonWebToken](https://jwt.io/introduction)
 
 
 #  Installing
