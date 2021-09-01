@@ -31,11 +31,12 @@ This app was created to enable users to stream movies without the need to downlo
 - [Python](https://www.python.org/) 
 - [JavaScript](https://www.javascript.com/)
 - [SASS](https://sass-lang.com/documentation/syntax)
+- [Bulma](https://bulma.io/)
+
 
 #  Frameworks
 - [Django](https://www.django-rest-framework.org/) 
 - [React Hooks](https://reactrouter.com/web/api/Hooks)
-- [Bulma](https://bulma.io/)
 
 #  Dependencies & Components.
 - [Axios](https://axios-http.com/) - Promise based HTTP client for the browser and node.js.  
