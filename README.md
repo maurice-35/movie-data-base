@@ -65,6 +65,8 @@ This app was created to enable users to stream movies without the need to downlo
 Non-registered or logged in users can browse movies by accessing the movies page and selecting the picture corresponding to their movie choice. 
 Registered and logged in users can access the movie page as well as add, edit and delete movies. However, users can only edit and delete the movies they added.
 
+(https://im6.ezgif.com/tmp/ezgif-6-9ee359bda54b.gif)
+
 #  Approach
 I began by drafting a plan of the movie-data-base. I then created models of the various relationships (one-to-many) using [Figma.com](https://www.figma.com/) and [Miro.com](https://www.miro.com/).
 
