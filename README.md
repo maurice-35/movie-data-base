@@ -34,8 +34,8 @@ This app was created to enable users to stream movies without the need to downlo
 
 - Build a full-stack app of your choice using Python and Django.
 - Consume your API with a separate front-end built with React.
-- Must be complete (CRUD Functionality) and have at least 2 relationships on the back-end.
-- The front-end should have differents views with at least 3 pages with polished styling.
+- Must be complete (CRUD functionality) and have at least 2 relationships on the back-end.
+- The front-end should have different views with at least 3 pages with polished stylings.
 - Must be deployed online for public access. 
 
 #  Technologies
