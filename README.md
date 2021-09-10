@@ -394,7 +394,7 @@ This final output does not cover my intention and plan for the project. As a res
 - I now have a better understanding of models and relationships.
 
 # Contribution to this project
-I would welcome any suggestions and contributions to improve on this project.
+I would welcome any suggestions and contributions to improve this project.
 
  
 #  License & copyright
