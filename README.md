@@ -39,23 +39,22 @@ This app was created to enable users to stream movies without the need to downlo
 - Must be deployed online for public access. 
 
 #  Technologies
-- [Python](https://www.python.org/) 
-- [JavaScript](https://www.javascript.com/)
-- [SASS](https://sass-lang.com/documentation/syntax)
-- [Bulma](https://bulma.io/)
+- Python 
+- JavaScript
+- SASS
+- Bulma
 
 
 #  Frameworks
-- [Django](https://www.django-rest-framework.org/) 
-- [React Hooks](https://reactrouter.com/web/api/Hooks)
+- Django
+- React Hooks
 
 #  Dependencies & Components.
-- [Axios](https://axios-http.com/) - Promise based HTTP client for the browser and node.js.  
-- [React-Router-Dom](https://reactrouter.com/web/example/modal-gallery) - DOM bindings for React Router 
-- [React-Select](https://react-slick.neostack.com/) - Select Input control for ReactJS.
-- [Cloudinary](https://cloudinary.com/documentation)
-- [JsonWebToken](https://jwt.io/introduction)
-
+- Axios - Promise based HTTP client for the browser and node.js.  
+- React-Router-Dom - DOM bindings for React Router 
+- React-Select - Select Input control for ReactJS.
+- Cloudinary
+- JsonWebToken
 
 #  Installing
 - Install back-end dependencies: `pipenv`. 
