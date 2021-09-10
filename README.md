@@ -32,7 +32,7 @@ This app was created to enable users to stream movies without the need to downlo
 
 # Brief
 This was a 10-day solo project to develop an app using Python and Django framework.
-### Technical requirements:
+### - Technical requirements:
 - Build a full-stack app of your choice using Python and Django.
 - Consume your API with a separate front-end built with React.
 - Must be complete (CRUD Functionality) and have at least 2 relationships on the back-end.
