@@ -39,10 +39,10 @@ This app was created to enable users to stream movies without the need to downlo
 - React Hooks
 #  Dependencies & Components.
 - Axios - Promise based HTTP client for the browser and node.js.  
-- React-Router-Dom - DOM bindings for React Router 
+- React-Router-Dom - DOM bindings for React Router. 
 - React-Select - Select Input control for ReactJS.
 - Cloudinary
-- JsonWebToken
+- Json Web Token
 #  Installing
 - Install back-end dependencies: `pipenv`. 
 - Enter the project shell: `pipenv shell`. 
