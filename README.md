@@ -66,9 +66,7 @@ I began by drafting a plan of the movie-data-base. I then created models of the 
 ![mirror](https://user-images.githubusercontent.com/84001897/128668854-171abdb2-0603-48b9-98a9-ee50757ac6c8.png)
 
 # User model
-I created a folder called `jwt_auth` and added 'jwt_auth' to my installed apps within the settings.py file in the project folder. I then linked it to the User model within the same folder:
-
-    `AUTH_USER_MODEL = 'jwt_auth.User'`
+I created a folder called `jwt_auth` and added 'jwt_auth' to my installed apps within the settings.py file in the project folder. I then linked it to the User model within the same folder: `AUTH_USER_MODEL = 'jwt_auth.User'`
 
     from django.db import models
     from django.contrib.auth.models import AbstractUser
