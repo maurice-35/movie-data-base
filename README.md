@@ -323,12 +323,12 @@ These functions then helped me implement authentication and different outcomes b
  
 I also restricted adding films to authenticated users only, and editing and deleting films to be allowed only to the user who created the film:
 
-{userIsOwner(movie.owner.id) &&
-   <div className="buttons">
-     <button onClick={handleDelete} className="button is-danger">Delete Movie</button>
-     <Link to={`/movies/${id}/edit/`} className="button is-warning">Edit Movie</Link>
-   </div>
-}
+    {userIsOwner(movie.owner.id) &&
+       <div className="buttons">
+         <button onClick={handleDelete} className="button is-danger">Delete Movie</button>
+         <Link to={`/movies/${id}/edit/`} className="button is-warning">Edit Movie</Link>
+       </div>
+    }
  
 # Wins
 I had a great experience working with Django at the backend. I applied similar knowledge from my project 3 and was able to come up with an MVP and models for the project. It was yet another opportunity to understand the backend better. Given the timeframe, I was able to do what I did and appreciated by my peers for the effort I put in to achieve this.
