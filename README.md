@@ -88,7 +88,7 @@ I then had to register the new app with the admin.py site in its app folder:
 
     admin.site.register(User)
  
-And tested everything works fine by running the server with `python manage.py runserver` and visiting the admin app `localhost:8000/admin`. I should be able to log in with my super user, but had I not created this when I set up the project, I can easily do so now by typing the following command in Terminal: python manage.py createsuperuser and filling the options required.
+And tested everything works fine by running the server with `python manage.py runserver` and visiting the admin app `localhost:8000/admin`. I should be able to log in with my super user, but had I not created this when I set up the project, I can easily do so now by typing the following command in Terminal: `python manage.py createsuperuser` and filling the options required.
 
 ![admin](https://user-images.githubusercontent.com/84001897/128673403-02a43823-aed2-4962-a389-52079e3585f8.png)
  
@@ -221,8 +221,8 @@ As an example, here is my movie model along with its implemented relationships, 
 ### Implementing relationships
 For establishing the One to Many relationships, I created in "ONE" / serializers folder a `populated.py` file where I established the relationship to the "MANY". As an example, here is my `populated.py` file for films:
  
-class PopulatedMovieSerializer(MovieSerializer):
- 
+    class PopulatedMovieSerializer(MovieSerializer):
+
 ### Adding an object called serializers
    
    comments = PopulatedCommentSerializer(many=True)
