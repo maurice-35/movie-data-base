@@ -207,7 +207,7 @@ As an example, here is my movie model along with its implemented relationships, 
        views_count = models.PositiveIntegerField(default=None)
        worth_a_watch = models.BooleanField(default=True, null=True)
    
- ### One_to_many relationship - a user can create many movies
+ ### One_to_many relationship - a user can create many movies.
   
       owner = models.ForeignKey(
            "jwt_auth.User",
