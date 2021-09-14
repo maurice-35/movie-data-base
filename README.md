@@ -42,7 +42,7 @@ This app was created to enable users to stream movies without the need to downlo
 - React-Router-Dom - DOM bindings for React Router. 
 - React-Select - Select Input control for ReactJS.
 - Cloudinary
-- Json Web Token
+- JSON Web Token
 #  Installing
 - Install back-end dependencies: `pipenv`. 
 - Enter the project shell: `pipenv shell`. 
