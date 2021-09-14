@@ -192,8 +192,8 @@ Once my User model was in place, I proceeded with creating my other 5 models one
 - Test by running the server and visiting `localhost:8000/admin` to check the models.
 As an example, here is my movie model along with its implemented relationships, which I will discuss next:
 
-      from django.db import models
-      from django.db.models.fields import CharField
+     from django.db import models
+     from django.db.models.fields import CharField
 
 # Movie model
     class Movie(models.Model):
