@@ -37,7 +37,7 @@ This app was created to enable users to stream movies without the need to downlo
 #  Frameworks
 - Django
 - React Hooks
-#  Dependencies & Components.
+#  Dependencies and Components.
 - Axios - Promise based HTTP client for the browser and node.js.  
 - React-Router-Dom - DOM bindings for React Router. 
 - React-Select - Select Input control for ReactJS.
@@ -283,7 +283,6 @@ I also wrote further functions in my auth.js to check the token and establish if
           return JSON.parse(atob(parts[1]))
          }
  
-
         const userIsAuthenticated = () => {
            const payload = getPayload()
            if (!payload) return false
