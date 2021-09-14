@@ -5,7 +5,7 @@
 - [Brief](#brief)
 - [Technologies](#technologies)
   - [Frameworks](#frameworks)
-  - [Dependencies & Components](#dependencies-and-components)
+  - [Dependencies and Components](#dependencies-and-components)
 - [Installing](#installing)
 - [How-To-Use Movie-app-project4](#how-to-use-movie-app-project4)
 - [Approach](#approach)
