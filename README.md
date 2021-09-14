@@ -151,7 +151,7 @@ It was also time to add a user serializer to be able to view my user model infor
 
          def post(self, request):
    
-   #### request data going into the UserSerializer to be converted
+   #### Request data going into the UserSerializer to be converted:
 
        user_to_create = UserSerializer(data=request.data)
        if user_to_create.is_valid():
