@@ -40,9 +40,9 @@ This app was created to enable users to stream movies without the need to downlo
 #  Dependencies and Components.
 - Axios - Promise based HTTP client for the browser and node.js.  
 - React-Router-Dom - DOM bindings for React Router. 
-- React-Select - Select Input control for ReactJS.
-- Cloudinary
-- JSON Web Token
+- React-Select - Selects Input control for ReactJS.
+- Cloudinary - Hosts images and video links. 
+- JSON Web Token - Stores the public/private key and gives the user's token.
 #  Installing
 - Install back-end dependencies: `pipenv`. 
 - Enter the project shell: `pipenv shell`. 
